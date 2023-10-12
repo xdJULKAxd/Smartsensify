@@ -1,0 +1,27 @@
+/* .settings */
+.layout{
+  min-height: 100vh;
+}
+footer{top: 90%;
+  position:static;
+
+}
+/* unvisited link */
+a:link {
+    color: #618358;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: #00FF00;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #36454f;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #deb4cb;
+  }
