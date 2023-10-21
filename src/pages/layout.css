@@ -25,3 +25,11 @@ a:link {
   a:active {
     color: #deb4cb;
   }
+.hidden{
+  display: none !important;
+
+}
+main{
+  min-height: calc(100vh - 70px);
+}
+  
