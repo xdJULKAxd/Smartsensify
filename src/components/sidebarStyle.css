@@ -6,6 +6,27 @@
     width: 300px;
     border: 1px solid black;
     transition: 350ms;
-    background-color: white;
+    background-color: rgb(138, 197, 216);
     z-index: 9990;
+    font-weight: bold;
+  font-style:italic ; 
+}
+.nav-links li{
+    margin-top: 30px;
+}
+.icon-user{
+    margin:30 auto;
+    font-size:40px;
+    display:block;
+    
+}
+.login{
+ font-size: 24px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px; 
+  font-weight: bold; /* Pogrubienie tekstu */
+  font-style: italic; /* Styl kursywy */
+  
 }

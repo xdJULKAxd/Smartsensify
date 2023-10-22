@@ -17,3 +17,9 @@
   .toolbar button:hover {
     background-color: blue;
   }
+  .menu-button {
+    width: 60px;
+    height: 60px; 
+    background-color: transparent; 
+    border: none; 
+  }

@@ -5,12 +5,14 @@ export function Toolbar({onMenuClick}) {
 
   return (
     <div className="toolbar">
-      <button onClick={()=>onMenuClick()}> <i class="fa-solid fa-bars"></i></button>
+      <button onClick={() => onMenuClick()} className="menu-button">
+    <i className="fa-solid fa-bars"></i>
+  </button>
       <div>
-         Logo
+      <img src="http://localhost:3000/public/logo.png" alt="Logo" height="200px"/> 
           </div>
           <button>
-            Szukaj
+          <i class="fa-solid fa-magnifying-glass"></i>
              </button>
     </div>
   );
