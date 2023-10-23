@@ -1,0 +1,9 @@
+.maptoolbar{
+    position:flex;
+    z-index: 3;
+    bottom: 70px;
+    left: 0;
+}
+.map{
+    width: 100vw;
+height:70vh }

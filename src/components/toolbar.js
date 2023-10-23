@@ -1,5 +1,6 @@
 import React from 'react';
 import "./toolbarStyle.css";
+import logo from "../images/logo.png";
 
 export function Toolbar({onMenuClick}) {
 
@@ -9,7 +10,7 @@ export function Toolbar({onMenuClick}) {
     <i className="fa-solid fa-bars"></i>
   </button>
       <div>
-      <img src="http://localhost:3000/public/logo.png" alt="Logo" height="200px"/> 
+      <img src={logo} alt="Logo" height="70px"/> 
           </div>
           <button>
           <i class="fa-solid fa-magnifying-glass"></i>
