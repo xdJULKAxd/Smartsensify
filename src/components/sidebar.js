@@ -17,7 +17,7 @@ export function Sidebar({isSidebarVisible}) {
   
     return (
       <div className={`sidebar ${isvisible ? 'visible' : 'hidden'}`}>
-        <button onClick={toggleVisibility}><i class="fa-solid fa-arrow-right"></i></button>
+        <button onClick={toggleVisibility}className="arrow"><i class="fa-solid fa-arrow-right"></i></button>
         <div className="nav-links">
           <li className="login">Zaloguj</li>
           <div className='icon'><i className="fa-solid fa-user icon-user"></i></div>

@@ -11,14 +11,17 @@
     font-weight: bold;
   font-style:italic ; 
   padding: 20px;
+  
+
+  
 }
 .nav-links li{
     margin-top: 30px;
 }
 .icon-user{
-    margin:30 auto;
-    font-size:40px;
-    display:block;
+  margin:30 auto;
+  font-size:50px;
+  display:block;
     
 }
 .login{
@@ -29,10 +32,18 @@
   height: 100px; 
   font-weight: bold; /* Pogrubienie tekstu */
   font-style: italic; /* Styl kursywy */
+  font-size: 34px;
   
 }
 .icon{
   align-items: center;
   justify-content: center;
   display: flex;
+}
+.arrow{
+  font-size: 30px;
+  color:rgb(14, 103, 30);
+  background-color:#007bff;
+border-radius: 20%;
+
 }

@@ -3,24 +3,32 @@ import "./homeStyle.css";
 export function Home() {
   return (
     <div>
-      <MapContainer className="map" center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+      <MapContainer
+        //className="map"
+        //center={[50.0614, 19.9379]}
+        //zoom={13}
+        //scrollWheelZoom={false}
+      >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          //attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          //url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[51.505, -0.09]}>
+        <Marker position={[50.0614, 19.9379]}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
         </Marker>
       </MapContainer>
-      <div className="maptoolbar">  <button className="sonsor">
-    <i className="fa-solid fa-bars"></i>
-  </button>
-  <button className="location">
-    <i className="fa-solid fa-bars"></i>
-  </button>
-  </div>
+      
+      <div className="maptoolbar">
+        {" "}
+        <button className="sonsor">
+          <i className="fa-solid fa-bars"></i>
+        </button>
+        <button className="location">
+          <i className="fa-sharp fa-solid fa-location-pin"></i>
+        </button>
+      </div>
     </div>
   );
 }
