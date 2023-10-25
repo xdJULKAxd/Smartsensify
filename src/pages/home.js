@@ -2,16 +2,16 @@ import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 import "./homeStyle.css";
 export function Home() {
   return (
-    <div>
+    <div className="home">
       <MapContainer
-        //className="map"
-        //center={[50.0614, 19.9379]}
-        //zoom={13}
-        //scrollWheelZoom={false}
+        className="map"
+        center={[50.0614, 19.9379]}
+        zoom={13}
+        scrollWheelZoom={false}
       >
         <TileLayer
-          //attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          //url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={[50.0614, 19.9379]}>
           <Popup>

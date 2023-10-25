@@ -13,7 +13,7 @@ export function Toolbar({onMenuClick}) {
       <img src={logo} alt="Logo" height="70px"/> 
           </div>
           <button>
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
              </button>
     </div>
   );

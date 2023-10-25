@@ -32,8 +32,6 @@ const toggleVisibility = () => {
           </main>
 
       <footer>
-
-        Ustawienia
       </footer>
       <Sidebar isSidebarVisible = { isvisible}/>
     </div>
