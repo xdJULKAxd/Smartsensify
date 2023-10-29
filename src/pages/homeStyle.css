@@ -8,9 +8,8 @@
   justify-content: space-between; /* Rozdziela przyciski na krańce kontenera */
   align-items: center;
   padding: 30px; /* Dodaje wewnętrzny odstęp, aby przyciski nie przykleiły się do krawędzi */
-  font-size: 70px;
   background-color: fff;
-  border-radius: 20%;
+  border-radius: 10%;
   
 }
     
@@ -21,11 +20,11 @@
   background-color:#429d3a; /* Dostosuj kolor tła przycisków */
   border: none; /* Usuwa obramowanie przycisków */
   margin: 0; /* Usuwa marginesy przycisków */
-  color: #fff; /* Kolor tekstu przycisków */
-  padding: 30px; /* Zwiększa rozmiar przycisków */
-  border-radius: 80px; /* Dodaje zaokrąglenia do przycisków */
+  color: #040101; /* Kolor tekstu przycisków */
+  padding: 27px; /* Zwiększa rozmiar przycisków */
+  border-radius: 25%; /* Dodaje zaokrąglenia do przycisków */
   font-weight: bold; /* Pogrubienie tekstu */
-  font-size: 10px;
+  font-size: 16px;
 }
 .map{
   width: 100%;

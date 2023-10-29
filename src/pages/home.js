@@ -26,7 +26,7 @@ export function Home() {
           <i className="fa-solid fa-bars"></i>
         </button>
         <button className="location">
-          <i className="fa-sharp fa-solid fa-location-pin"></i>
+        <i className="fa-solid fa-location-dot"></i>
         </button>
       </div>
     </div>

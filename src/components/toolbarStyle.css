@@ -3,7 +3,7 @@
     justify-content: space-between;
     background-color: #d3d3d3;
     padding: 10px;
-    font-size: 18px;
+    font-size: 30px;
     height: 70px;
   }
   
@@ -14,18 +14,20 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    font-size: 24px;
     border-radius: 20%;
+    font-size: 24px;
   }
   
   .toolbar button:hover {
-    background-color: blue;
+    background-color: rgb(54, 98, 111);
+    
   }
   .menu-button {
     width: 60px;
     height: 60px; 
     background-color: transparent; 
     border: none; 
+    border-radius: 30%;
+    font-weight: 40px;
     font-size: 24px;
-    border-radius: 20%;
   }
