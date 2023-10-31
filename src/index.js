@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from './pages/home';
 import { Layout } from './pages/layout';
+import{Sensors}from './pages/sensors';
+ import{Sensor}from'./pages/Sensor';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,8 +15,10 @@ root.render(
     <Layout>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-        </Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/sensors" element={<Sensors/>}></Route>
+         <Route path="/sensor" element={<Sensor/>}></Route> 
+      
       </Routes>
     </BrowserRouter>
     </Layout>
