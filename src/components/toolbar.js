@@ -5,6 +5,7 @@ import logo from "../images/logo.png";
 export function Toolbar({onMenuClick}) {
 
   return (
+    
     <div className="toolbar">
       <button onClick={() => onMenuClick()} className="menu-button">
     <i className="fa-solid fa-bars"></i>
@@ -16,5 +17,6 @@ export function Toolbar({onMenuClick}) {
           <i className="fa-solid fa-magnifying-glass"></i>
              </button>
     </div>
+   
   );
 }

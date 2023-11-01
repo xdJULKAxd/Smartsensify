@@ -1,0 +1,22 @@
+.sensorElement {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    
+  }
+  .bottom-plus{
+    position: fixed;
+    bottom: 10px; /* Dystans od dołu strony */
+    right: 10px; /* Dystans od prawej strony */
+    font-size: 24px; /* Rozmiar ikony */
+  }
+  
+  .sensor-0 {
+    background-color: #b36da1;
+  }
+  
+  
+  .sensor-1 {
+    background-color: #615b5e;
+  }

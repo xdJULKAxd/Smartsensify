@@ -47,3 +47,17 @@
 border-radius: 20%;
 font-weight: bold;
 }
+.bottom-link {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 45px;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 24px;
+  align-items: center;
+  display: flex;
+
+}

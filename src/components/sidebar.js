@@ -26,6 +26,8 @@ export function Sidebar({isSidebarVisible}) {
     <div><i class="fa-solid fa-location-dot"></i><a href="news.asp">Czujniki</a></div>
     <div><i class="fa-solid fa-envelope"></i><a href="contact.asp">Powiadomienia</a></div>
     <div><i class="fa-solid fa-heart"></i><a href="about.asp">Ocena aplikacji</a></div>
+    </div>
+    <div className="bottom-link">
     <div><i class="fa-solid fa-gears"></i><a href="about.asp">Ustawienia</a></div>
         </div>
       </div>
