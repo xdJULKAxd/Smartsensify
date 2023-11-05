@@ -8,6 +8,7 @@ import { Home } from './pages/home';
 import { Layout } from './pages/layout';
 import{Sensors}from './pages/sensors';
  import{Sensor}from'./pages/Sensor';
+import {SensorDetails }from './pages/SensorDetails';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,7 +18,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/sensors" element={<Sensors/>}></Route>
-         <Route path="/sensor" element={<Sensor/>}></Route> 
+         <Route path="/sensor/:id" element={<SensorDetails/>}></Route> 
       
       </Routes>
     </BrowserRouter>

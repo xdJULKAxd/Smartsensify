@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {CreatSensor} from '../servises/API';
 
 function AddNewSensor() {
   const navigate = useNavigate();
@@ -13,22 +14,13 @@ function AddNewSensor() {
       name: sensorName,
       isPublic,
     };
-
-    // Wysłanie danych do API
-    const response = await fetch('https://smartsensify.onrender.com/api/sensors', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(sensorData),
-    });
-
+    const response = CreatSensor(sensorData)
     if (response.status === 200) {
-      // Utworzenie czujnika zakończone sukcesem, przekieruj do widoku szczegółów
+      
       const data = await response.json();
       navigate(`/sensor/${data.sensor._id}`);
     } else {
-      // Obsługa błędów, np. wyświetlenie komunikatu
+   
     }
   };
 
