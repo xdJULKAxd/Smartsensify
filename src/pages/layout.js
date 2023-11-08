@@ -13,7 +13,7 @@ export function Layout({ children }) {
   }
 }
 const centerStye = {
-  textAlign: 'center',//Wyśrodkować tekst
+  textAlign: 'center',
 }
 const [isvisible, setIsVisible] = useState(false);
 

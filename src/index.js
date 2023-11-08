@@ -9,6 +9,7 @@ import { Layout } from './pages/layout';
 import{Sensors}from './pages/sensors';
  import{Sensor}from'./pages/Sensor';
 import {SensorDetails }from './pages/SensorDetails';
+import { LoginPages } from './pages/loginPages';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
         <Route path="/" element={<Home />}></Route>
         <Route path="/sensors" element={<Sensors/>}></Route>
          <Route path="/sensor/:id" element={<SensorDetails/>}></Route> 
+         <Route path="/login" element={<LoginPages/>}></Route> 
       
       </Routes>
     </BrowserRouter>
