@@ -7,17 +7,17 @@ export function SensorDetails() {
 
   useEffect(() => {
     const fetchSensorData = async () => {
-      // try {
-      //   const response = await fetch(`https://smartsensify.onrender.com/api/sensors/${id}`);
-      //   if (response.status === 200) {
-      //     const data = await response.json();
-      //     setSensor(data.sensor);
-      //   } else {
-      //     console.error('Błąd pobierania danych czujnika');
-      //   }
-      // } catch (error) {
-      //   console.error('Błąd sieci: ' + error);
-      // }
+       try {
+         const response = await fetch(`https://smartsensify.onrender.com/api/sensors/${id}`);
+         if (response.status === 200) {
+           const data = await response.json();
+           setSensor(data.sensor);
+         } else {
+           console.error('Błąd pobierania danych czujnika');
+        }
+       } catch (error) {
+         console.error('Błąd sieci: ' + error);
+       }
     };
   setSensor({"_id":"64c169b666bca715323efdfa","name":"Public sensor 1","type":["test","test2"],"isPublic":true,"__v":0})
   
