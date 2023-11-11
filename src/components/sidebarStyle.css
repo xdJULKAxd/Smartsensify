@@ -6,46 +6,51 @@
     width: 300px;
     border: 1px solid black;
     transition: 350ms;
-    background-color: rgb(138, 197, 216);
+    background-color: rgb(154, 195, 211);
     z-index: 9990;
     font-weight: bold;
   font-style:italic ; 
   padding: 20px;
   font-size: 24px;
-  
+  line-height: 2.5;
 
-  
 }
 .nav-links li{
     margin-top: 30px;
-}
-.icon-user{
-  margin:30 auto;
-  font-size:50px;
-  display:block;
-    
-}
-.login{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px; 
-  font-weight: bold; /* Pogrubienie tekstu */
-  font-style: italic; /* Styl kursywy */
-  font-size: 34px;
-  
 }
 .icon{
   align-items: center;
   justify-content: center;
   display: flex;
+ 
+  
 }
+.icon-user{
+  margin:20px auto;
+  display:block;
+  font-size: 85px;
+   
+}
+.login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px; 
+  font-weight: bold; /* Pogrubienie tekstu */
+  font-style: italic; /* Styl kursywy */
+  font-size: 34px;
+  margin-right: 20px; 
+   
+  
+}
+
 .arrow{
-  font-size: 40px;
-  color:rgb(14, 103, 30);
-  background-color:#007bff;
+  font-size: 45px;
+  color:rgb(6, 12, 7);
+  background-color:#5b99dc;
 border-radius: 20%;
 font-weight: bold;
+border: none;
 }
 .bottom-link {
   position: absolute;
@@ -59,5 +64,5 @@ font-weight: bold;
   font-size: 24px;
   align-items: center;
   display: flex;
-
+  
 }

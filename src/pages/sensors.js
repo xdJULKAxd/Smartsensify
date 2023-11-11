@@ -5,7 +5,7 @@ export function Sensors() {
 
 return (
   <div>
-    <div>Lista czujników</div>
+    <div className="name">Lista czujników</div>
 
     {sensorData.map((sensor, index) => (
       <div className={`sensorElement sensor-${index}`} key={sensor.id}>
@@ -19,9 +19,13 @@ return (
           ))}
           
         </ul>
+        {(index === 0 || index === 1) && ( // Warunek dla sensor-0 i sensor-1
+            <button className="information">Więcej informacji</button>
+          )}
       </div>
       
     ))}
+   
     <div className="bottom-plus">
       <i className="fa-solid fa-plus"></i>
       </div>

@@ -19,9 +19,9 @@ export function Sidebar({isSidebarVisible}) {
       <div className={`sidebar ${isvisible ? 'visible' : 'hidden'}`}>
         <button onClick={toggleVisibility}className="arrow"><i class="fa-solid fa-arrow-right"></i></button>
         <div className="nav-links">
-          <li className="login">Zaloguj</li>
           <div className='icon'><i className="fa-solid fa-user icon-user"></i></div>
-        <div><i class="fa-solid fa-map"></i><a href="default.asp">Mapa</a></div>
+          <li className="login">Zaloguj</li>
+        <div><i class="fa-solid fa-map"> </i><a href="default.asp">Mapa</a></div>
     <div><i class="fa-solid fa-chart-simple"></i><a href="about.asp">Analiza danych</a></div>
     <div><i class="fa-solid fa-location-dot"></i><a href="news.asp">Czujniki</a></div>
     <div><i class="fa-solid fa-envelope"></i><a href="contact.asp">Powiadomienia</a></div>

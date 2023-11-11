@@ -1,22 +1,52 @@
-.sensorElement {
+
+.name {
+ font-size:24px;
+ font-style:italic ; 
+ display: flex;
+ justify-content: center; 
+ align-items: center; 
+
+}.sensorElement {
     border: 1px solid #ddd;
     padding: 10px;
     margin: 10px;
     background-color: #f0f0f0;
+    font-style:italic ; 
     
   }
   .bottom-plus{
     position: fixed;
-    bottom: 10px; /* Dystans od dołu strony */
-    right: 10px; /* Dystans od prawej strony */
-    font-size: 24px; /* Rozmiar ikony */
+    bottom: 20px; /* Dystans od dołu strony */
+    right: 20px; /* Dystans od prawej strony */
+    font-size: 50px; /* Rozmiar ikony */
+    
   }
   
-  .sensor-0 {
-    background-color: #b36da1;
+  .sensor-0{
+    background-color: #dc97cb;
   }
   
   
   .sensor-1 {
-    background-color: #615b5e;
+    background-color: #8b7a83;
   }
+ .information{
+  border-radius: 8px;
+  text-align: right;
+  color:#fafffa;
+  background-color:#0a5c0a;
+  outline: none;
+  height: 90px;
+  width: 150px;
+  position: absolute;
+  position: absolute;
+  top: 240px; /* Przykładowa wartość dla odległości od góry strony */
+  right: 459px;
+  font-size: 15px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+ } 

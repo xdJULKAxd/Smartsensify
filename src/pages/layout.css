@@ -8,22 +8,21 @@ footer{top: 90%;
 }
 /* unvisited link */
 a:link {
-    color: #0b2243;
+    color: #346fc3;
   }
   
   /* visited link */
   a:visited {
-    color: #0084ff;
-  }
+    color: #6c9d6c;}
   
   /* mouse over link */
   a:hover {
-    color: #4d77b3;
+    color: #6c9d6c;
   }
   
   /* selected link */
   a:active {
-    color: #0084ff;
+    color: #5181c5;
   }
 .hidden{
   display: none !important;

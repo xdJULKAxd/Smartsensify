@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {CreatSensor} from '../servises/API';
+import './addNewSensorStyle'
 
 function AddNewSensor() {
   const navigate = useNavigate();

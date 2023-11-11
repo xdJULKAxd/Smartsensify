@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './SensorDetailsStyle.css';
+
+
 
 export function SensorDetails() {
   const { id } = useParams();
   const [sensor, setSensor] = useState({ name: '', isPublic: false });
+
+
+
+
 
   useEffect(() => {
     const fetchSensorData = async () => {
@@ -20,6 +27,8 @@ export function SensorDetails() {
        }
     };
   setSensor({"_id":"64c169b666bca715323efdfa","name":"Public sensor 1","type":["test","test2"],"isPublic":true,"__v":0})
+  setSensor({
+  })
   
     fetchSensorData();
   }, [id]);
@@ -28,16 +37,18 @@ export function SensorDetails() {
   if (!sensor) {
     return <div>Ładowanie...</div>;
   }
-
   return (
     <div>
-      <h2>Szczegóły czujnika</h2>
-      <p>Nazwa czujnika: {sensor.name}</p>
-      <p>Publiczny: {sensor.isPublic ? 'Tak' : 'Nie'}</p>
+      <h2 className="name">Szczegóły czujnika</h2>
+      <p className="sensor-name">Nazwa czujnika: {sensor.name}</p>
+      <p className="public-info">Publiczny: {sensor.isPublic ? 'Tak' : 'Nie'}</p>
       {/* {sensor.type} */}
-      { sensor.type ? sensor.type.map( oneType => <p>{oneType}</p>) : <></>}  
+      <p className="typ"> Typ :{ sensor.type ? sensor.type.map( oneType => <p>{oneType}</p>) : <></>} </p> 
+      <div class="bottom-bar">
+      <button className="deleteSensor"> Usuń sensor</button>
+      </div>
+      <div className="background"> </div>
+      
     </div>
   );
 }
-
-export default SensorDetails;

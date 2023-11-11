@@ -1,0 +1,63 @@
+/* Styl dla informacji czy czujnik jest publiczny */
+.public-info {
+  font-size: 18px;
+  font-style: italic;
+  color: #010000;
+  text-align: left;
+  margin: 20px;
+  line-height: 1.5;
+  
+
+  
+ 
+}
+.typ {
+  font-size: 18px;
+  font-weight: bold;
+  color: #010000;
+  text-align: left;
+  margin: 20px;
+  line-height: 1.5;
+  
+}
+.sensor-name {
+  font-size: 24px;
+  font-weight: bold;
+  color:#010000;
+  text-align: left;
+  margin: 20px;
+  line-height: 1.5;
+  
+}
+
+
+.name{
+  font-size: 24px;
+  font-weight: bold;
+  color: #010000;
+  text-align: left;
+  margin: 20px;
+  line-height: 1.5;
+}
+.deleteSensor{
+  font-weight: bold;
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #bd2828;
+  position: absolute;
+  bottom: 20px;
+  height: 70px;
+  left: 50%;
+  transform: translateX(-50px);
+}
+.background{
+  
+  background-color: #9e9494;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}

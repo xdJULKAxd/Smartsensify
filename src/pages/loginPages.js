@@ -1,4 +1,5 @@
 
+import './loginPagesStyle.css'
 export function  LoginPages(){
 
 return (
