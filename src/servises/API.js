@@ -1,6 +1,6 @@
 
 export async function CreatSensor(sensorData){
-    const response = await fetch('https://smartsensify.onrender.com/api/sensors', {
+    const response = await fetch ('http://localhost:3001/sensor' , {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -9,4 +9,16 @@ export async function CreatSensor(sensorData){
       
     });
     return response;
+}
+export async function GetSensors(){
+  const response = await fetch ('http://localhost:3001/sensors' , {
+    method: 'GET', 
+  });
+  return response.json();
+}
+export async function GetSensor(id){
+  const response = await fetch (`http://localhost:3001/sensor/${id}` , {
+    method: 'GET',
+  });
+  return response.json();
 }

@@ -1,22 +1,36 @@
 import "./sensorsStyle.css"
 import React from 'react';
-import { sensorData } from "../models/database";
+import { useEffect, useState} from "react";
+import { GetSensors } from "../servises/API";
 export function Sensors() {
 
-return (
+  const [sensors, setSensors] = useState( []);
+  
+  useEffect(() => {
+    GetSensors().then( result =>{
+      console.log(result)
+setSensors(result.sensors)  
+    })
+  
+ }, []);
+ return (
   <div>
     <div className="name">Lista czujników</div>
 
-    {sensorData.map((sensor, index) => (
-      <div className={`sensorElement sensor-${index}`} key={sensor.id}>
+    {sensors.map((sensor, index) => (
+      <div className={`sensorElement sensor-${index}`} key={sensor._id}>
         <h3>{sensor.name}</h3>
+        <div>
+          {sensor.isPublic}
+          
+          </div>
         <ul>
-          {sensor.data.slice(0, 2).map((item) => (
+          {/* {sensor.data.slice(0, 2).map((item) => (
               <div key={item.type}>
               <p>{item.type}</p>
               <p>Last Value: {item.value} {item.unit}</p>
             </div>
-          ))}
+          ))} */}
           
         </ul>
         {(index === 0 || index === 1) && ( // Warunek dla sensor-0 i sensor-1
