@@ -21,8 +21,12 @@ setSensors(result.sensors)
       <div className={`sensorElement sensor-${index}`} key={sensor._id}>
         <h3>{sensor.name}</h3>
         <div>
-          {sensor.isPublic}
-          
+          {sensor.isPublic}<br/>
+          {sensor.createdAt} <br/>
+          {sensor.updatedAt}  <br/>
+          </div>
+          <div>
+           
           </div>
         <ul>
           {/* {sensor.data.slice(0, 2).map((item) => (
@@ -31,11 +35,13 @@ setSensors(result.sensors)
               <p>Last Value: {item.value} {item.unit}</p>
             </div>
           ))} */}
+         
           
         </ul>
         {(index === 0 || index === 1) && ( // Warunek dla sensor-0 i sensor-1
             <button className="information">Więcej informacji</button>
           )}
+          
       </div>
       
     ))}

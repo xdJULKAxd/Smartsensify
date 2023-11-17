@@ -1,9 +1,12 @@
+const jwt = require('jsonwebtoken'); 
+
 const express = require('express')
  var cors = require('cors') 
  var corsOptions = {
     origin: 'http://localhost:3000' // ADRES REACTA, CZYLI JAKI ADRES NASZE API MOŻE NASŁUCHIWAĆ
   }
 const app = express()
+app.use(express.json())
 app.use(cors(corsOptions))
 const port = 3001
 
@@ -34,6 +37,16 @@ app.get('/sensor/:id', async(req, res) => {
    res.status(201)
    
   })
+  app.post('/login', (req, res) => {
+    const token = jwt.sign("jakaś nazwa usera", "tajny sekretny klucz");
+    const token2 = jwt.verify(token, "tajny sekretny klucz")//weryfikowanie tokenu
+    console.log(req.body ) 
+    console.log(token)
+
+    res.status(201)
+    res.json({token:token})
+    
+   })
 
 app.listen(port, () => {
   console.log(`localhost ${port}`)

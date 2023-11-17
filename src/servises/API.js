@@ -22,3 +22,16 @@ export async function GetSensor(id){
   });
   return response.json();
 }
+
+
+export async function SendAuthorization(loginData){
+  const response = await fetch ('http://localhost:3001/login' , {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(loginData),
+    
+  });
+  return response;
+}
