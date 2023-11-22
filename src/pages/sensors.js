@@ -22,6 +22,7 @@ setSensors(result.sensors)
         <h3>{sensor.name}</h3>
         <div>
           {sensor.isPublic}<br/>
+          {sensor.type}<br/>
           {sensor.createdAt} <br/>
           {sensor.updatedAt}  <br/>
           </div>

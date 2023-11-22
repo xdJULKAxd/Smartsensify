@@ -1,3 +1,4 @@
+const sqlite3 = require('sqlite3');
 const jwt = require('jsonwebtoken'); 
 
 const express = require('express')
@@ -10,6 +11,13 @@ app.use(express.json())
 app.use(cors(corsOptions))
 const port = 3001
 
+
+const db = new sqlite3.Database('DataBase.db', (err) => {
+  if (err) {
+    console.error(err.message);
+  }
+  console.log('Connected to the chinook database.');
+});
 
 app.get('/sensors', async(req, res) => {
     const response = await fetch('https://smartsensify.onrender.com/api/sensors/');
@@ -37,15 +45,30 @@ app.get('/sensor/:id', async(req, res) => {
    res.status(201)
    
   })
-  app.post('/login', (req, res) => {
-    const token = jwt.sign("jakaś nazwa usera", "tajny sekretny klucz");
-    const token2 = jwt.verify(token, "tajny sekretny klucz")//weryfikowanie tokenu
-    console.log(req.body ) 
-    console.log(token)
+  app.post('/login', async(req, res) => {
+    let users
+    await  db.all("SELECT * FROM 	Konta",(err, rows) => {
+      console.log(rows);
+      users = rows
 
-    res.status(201)
-    res.json({token:token})
+    })
+    for (let  row in users){
+      console.log(row)
+      if ( row.Login  === req.body.login && row.Haslo === req.body.password){
+        const token = jwt.sign(row.Login, "tajny sekretny klucz");
+        res.status(200)
+        res.json({token:token})
+        console.log("znaleziono");
+        break
+       
+      }
     
+    }
+    if(res.statusCode !== 200){
+      res.status(404)
+        res.json({error:"nie znaleziono uzytkownika"}) 
+    console.log("nieznaleziono");
+    }
    })
 
 app.listen(port, () => {

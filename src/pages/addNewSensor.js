@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {CreatSensor} from '../servises/API';
-import './addNewSensorStyle'
+import './addNewSensorStyle.css';
 
-function AddNewSensor() {
+export function AddNewSensor() {
   const navigate = useNavigate();
   const [sensorName, setSensorName] = useState('');
   const [isPublic, setIsPublic] = useState(true);
