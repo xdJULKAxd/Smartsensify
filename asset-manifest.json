@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Smartsensify/static/css/main.beaab575.css",
-    "main.js": "/Smartsensify/static/js/main.e84f9da2.js",
+    "main.js": "/Smartsensify/static/js/main.a1b7db28.js",
     "static/js/787.994511a4.chunk.js": "/Smartsensify/static/js/787.994511a4.chunk.js",
     "static/media/logo.png": "/Smartsensify/static/media/logo.e5f2dc64097a1ccd73f0.png",
     "index.html": "/Smartsensify/index.html",
     "main.beaab575.css.map": "/Smartsensify/static/css/main.beaab575.css.map",
-    "main.e84f9da2.js.map": "/Smartsensify/static/js/main.e84f9da2.js.map",
+    "main.a1b7db28.js.map": "/Smartsensify/static/js/main.a1b7db28.js.map",
     "787.994511a4.chunk.js.map": "/Smartsensify/static/js/787.994511a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.beaab575.css",
-    "static/js/main.e84f9da2.js"
+    "static/js/main.a1b7db28.js"
   ]
 }
