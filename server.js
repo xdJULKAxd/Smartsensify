@@ -45,31 +45,25 @@ app.get('/sensor/:id', async(req, res) => {
    res.status(201)
    
   })
-  app.post('/login', async(req, res) => {
-    let users
-    await  db.all("SELECT * FROM 	Konta",(err, rows) => {
-      console.log(rows);
-      users = rows
-
-    })
-    for (let  row in users){
-      console.log(row)
-      if ( row.Login  === req.body.login && row.Haslo === req.body.password){
-        const token = jwt.sign(row.Login, "tajny sekretny klucz");
-        res.status(200)
-        res.json({token:token})
-        console.log("znaleziono");
-        break
-       
-      }
-    
-    }
-    if(res.statusCode !== 200){
-      res.status(404)
+  app.post('/login', (req, res) => {
+    db.all("SELECT * FROM Konta",(err, rows) => {
+        console.log('rows', rows, 'err', err);
+        for (let i=0; i<rows.length; i++){
+            const row = rows[i]
+            console.log('row', row)
+            if ( row.Login  === req.body.login && row.Haslo === req.body.password){
+                const token = jwt.sign(row.Login, "tajny sekretny klucz");
+                res.status(200)
+                res.json({token:token})
+                console.log("znaleziono");
+                return;
+            }
+        }
+        res.status(404)
         res.json({error:"nie znaleziono uzytkownika"}) 
-    console.log("nieznaleziono");
-    }
-   })
+        console.log("nieznaleziono");
+    })
+})
 
 app.listen(port, () => {
   console.log(`localhost ${port}`)

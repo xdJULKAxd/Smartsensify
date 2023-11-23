@@ -27,9 +27,11 @@ export function AddNewSensor() {
 
   return (
     <div>
+      <div className="nowy"></div>
       <h2>Dodaj nowy czujnik</h2>
       <form onSubmit={handleSubmit}>
         <label>
+        <div className="nazwa"></div>
           Nazwa czujnika:
           <input type="text" value={sensorName} onChange={(e) => setSensorName(e.target.value)} />
         </label>
