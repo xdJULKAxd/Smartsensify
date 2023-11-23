@@ -8,20 +8,16 @@
   }
   
   .toolbar button {
-    margin-right: 10px;
+    margin-right: 40px;
     width: 60px;
     height: 60px; 
     background-color: transparent;
     border: none;
     cursor: pointer;
-    border-radius: 20%;
+    border-radius: 10%;
     font-size: 24px;
   }
   
-  .toolbar button:hover {
-    background-color: rgb(54, 98, 111);
-    
-  }
   .menu-button {
     width: 60px;
     height: 60px; 
