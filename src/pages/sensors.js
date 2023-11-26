@@ -27,7 +27,7 @@ setSensors(result.sensors)
           {sensor.updatedAt}  <br/>
           </div>
           <div>
-           
+            
           </div>
         <ul>
           {/* {sensor.data.slice(0, 2).map((item) => (
@@ -55,4 +55,4 @@ setSensors(result.sensors)
 );
 }
 
-export default Sensors;
+export default Sensors; 

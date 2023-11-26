@@ -8,6 +8,7 @@ export function AddNewSensor() {
   const [sensorName, setSensorName] = useState('');
   const [isPublic, setIsPublic] = useState(true);
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -30,16 +31,16 @@ export function AddNewSensor() {
       <div className="nowy"></div>
       <h2>Dodaj nowy czujnik</h2>
       <form onSubmit={handleSubmit}>
+  
         <label>
-        <div className="nazwa"></div>
-          Nazwa czujnika:
-          <input type="text" value={sensorName} onChange={(e) => setSensorName(e.target.value)} />
+        <div className="nazwa">Nazwa czujnika</div>
+          <input type="text" value={sensorName} onChange={(e) => setSensorName(e.target.value)} /> 
         </label>
         <label>
-          Publiczny:
-          <input type="checkbox" checked={isPublic} onChange={() => setIsPublic(!isPublic)} />
+         <input type="checkbox" checked={isPublic} onChange={() => setIsPublic(!isPublic)} />
+        <div className="publiczny">Publiczny:</div> 
         </label>
-        <button type="submit">Dodaj czujnik</button>
+        <button type="submit"class="custom">Dodaj czujnik</button>
       </form>
     </div>
   );

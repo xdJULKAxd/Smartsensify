@@ -30,16 +30,17 @@
   .sensor-1 {
     background-color: #8b7a83;
   }
+  
  .information{
   border-radius: 8px;
   text-align: right;
   color:#fafffa;
   background-color:#0a5c0a;
   outline: none;
-  height: 70px;
-  width: 130px;
+  height: 60px;
+  width: 150px;
   position: absolute;
-  top: 270px; /* Przykładowa wartość dla odległości od góry strony */
+  top: 250px; /* Przykładowa wartość dla odległości od góry strony */
   right: 459px;
   font-size: 15px;
   font-style: italic;
