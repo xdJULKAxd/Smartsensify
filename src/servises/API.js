@@ -1,9 +1,11 @@
 
 export async function CreatSensor(sensorData){
+  const token = localStorage.getItem("token")
     const response = await fetch ('http://localhost:3001/sensor' , {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
       },
       body: JSON.stringify(sensorData),
       

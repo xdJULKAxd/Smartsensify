@@ -8,7 +8,11 @@ export function  LoginPages(){
  const[ password, setPassword] = useState("")
     function send(){
 SendAuthorization({login,password}).then( (res)=> res.json() )
-.then( (json) => console.log(json) )
+.then( (json) => {
+localStorage.setItem("token",json.token);
+
+
+}) 
 .catch( (error) => console.log(error) )
     }
 
