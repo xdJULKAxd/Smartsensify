@@ -20,7 +20,7 @@ const db = new sqlite3.Database("DataBase.db", (err) => {
 
 app.get("/sensors", async (req, res) => {
   const response = await fetch(
-    "https://smartsensify.onrender.com/api/sensors/"
+    "https://smartsensify.onrender.com/api/sensors"
   );
   if (response.status === 200) {
     const data = await response.json();
@@ -31,7 +31,7 @@ app.get("/sensors", async (req, res) => {
   }
 });
 app.get("/sensor/:id", async (req, res) => {
-  const id = req.params.idd;
+  const id = req.params.id;
   const response = await fetch(
     `https://smartsensify.onrender.com/api/sensors/${id}`
   );
@@ -44,15 +44,15 @@ app.get("/sensor/:id", async (req, res) => {
   }
 });
 app.post("/sensors", async (req, res) => {
-  const token = req.headers["Authorization"].substring(7);
+  const token = req.headers["Authorization"];
   //const decoded = jwt.verify (token, "tajny sekretny klucz")
   const response = await fetch(
-    `https://smartsensify.onrender.com/api/sensors/`,
+    `https://smartsensify.onrender.com/api/sensors`,
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
+        "Authorization":token,
       },
       body: JSON.stringify(req.body),
     }
