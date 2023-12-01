@@ -16,13 +16,13 @@ export function AddNewSensor() {
       name: sensorName,
       isPublic,
     };
-    const response = CreatSensor(sensorData)
-    if (response.status === 200) {
+    const response = await CreatSensor(sensorData)
+    if (response.status < 300) {
       
       const data = await response.json();
       navigate(`/sensor/${data.sensor._id}`);
     } else {
-   
+   console.log(response)
     }
   };
 

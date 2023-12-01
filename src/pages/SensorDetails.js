@@ -15,7 +15,8 @@ export function SensorDetails() {
 
   useEffect(() => {
      GetSensor(id).then( result =>{
-setSensor(result)
+      
+setSensor(result.sensor)
      })
    
   }, [id]);

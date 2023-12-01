@@ -44,7 +44,7 @@ app.get("/sensor/:id", async (req, res) => {
   }
 });
 app.post("/sensors", async (req, res) => {
-  const token = req.headers["Authorization"];
+  const token = req.headers["authorization"];
   //const decoded = jwt.verify (token, "tajny sekretny klucz")
   const response = await fetch(
     `https://smartsensify.onrender.com/api/sensors`,
@@ -90,6 +90,20 @@ app.post("/login", async (req, res) => {
   //     res.json({error:"nie znaleziono uzytkownika"})
   //     console.log("nieznaleziono");
   // })
+});
+app.post("/registration", async (req, res) => {
+  const response = await fetch(
+    `https://smartsensify.onrender.com/api/auth/register`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(req.body),
+    }
+  );
+  res.status(response.status);
+  res.send(await response.json());
 });
 
 app.listen(port, () => {

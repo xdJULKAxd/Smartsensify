@@ -1,21 +1,30 @@
 
 import { useState } from 'react'
 import './loginPagesStyle.css'
-import { SendAuthorization } from '../servises/API'
+import { SendAuthorization, CreatAccount} from '../servises/API'
 export function  LoginPages(){
 
  const[ login, setLogin] = useState("")
  const[ password, setPassword] = useState("")
- const [Username,setName] = useState("")
+ const [username,setName] = useState("")
  const [isLogin, setisLogin] = useState(true)
     function send(){
-SendAuthorization({login,password}).then( (res)=> res.json() )
+      if (isLogin ){
+
+      
+SendAuthorization({identifier:login, password}).then( (res)=> res.json() )
 .then( (json) => {
 localStorage.setItem("token",json.token);
-
+window.location = "/";
 
 }) 
 .catch( (error) => console.log(error) )
+      }
+      else{
+        CreatAccount({email:login, password, username}).then( (res)=> res.json())
+        .then( (json) => console.log(json))
+        .catch( (error) => console.log(error) ) 
+      }
     }
 
     return (
@@ -42,9 +51,9 @@ localStorage.setItem("token",json.token);
               <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Hasło" />
             </div>
             <div className="form-group">
-              <input type="text" required value={Username} onChange={(e) => setName(e.target.value)} placeholder="Username" />
+              <input type="text" required value={username} onChange={(e) => setName(e.target.value)} placeholder="Username" />
             </div>
-            <button onClick={send}>Zaloguj się teraz</button>
+            <button onClick={send}>Zarejestruj się</button>
           </div>}
           <div className="footer">
             <p>Cześć, miło cię poznać!</p>

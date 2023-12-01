@@ -1,11 +1,11 @@
 
 export async function CreatSensor(sensorData){
   const token = localStorage.getItem("token")
-    const response = await fetch ('http://localhost:3001/sensor' , {
+    const response = await fetch ('http://localhost:3001/sensors' , {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
+        'Authorization': token
       },
       body: JSON.stringify(sensorData),
       
@@ -22,6 +22,7 @@ export async function GetSensor(id){
   const response = await fetch (`http://localhost:3001/sensor/${id}` , {
     method: 'GET',
   });
+  console.log(response);
   return response.json();
 }
 
@@ -33,6 +34,17 @@ export async function SendAuthorization(loginData){
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(loginData),
+    
+  });
+  return response;
+}
+export async function CreatAccount(registrationData){
+  const response = await fetch ('http://localhost:3001/registration' , {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(registrationData),
     
   });
   return response;
