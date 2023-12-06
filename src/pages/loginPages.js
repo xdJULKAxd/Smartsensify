@@ -8,12 +8,21 @@ export function  LoginPages(){
  const[ password, setPassword] = useState("")
  const [username,setName] = useState("")
  const [isLogin, setisLogin] = useState(true)
+ const [message,setMessage] = useState("")
     function send(){
       if (isLogin ){
 
-      
-SendAuthorization({identifier:login, password}).then( (res)=> res.json() )
-.then( (json) => {
+   
+        
+SendAuthorization({identifier:login, password})
+.then( async(res) => {
+  const json = await res.json()
+if(res.status !== 200){
+  setMessage(json.error)
+  return
+}
+
+  
 localStorage.setItem("token",json.token);
 window.location = "/";
 
@@ -21,8 +30,16 @@ window.location = "/";
 .catch( (error) => console.log(error) )
       }
       else{
-        CreatAccount({email:login, password, username}).then( (res)=> res.json())
-        .then( (json) => console.log(json))
+        CreatAccount({email:login, password, username})
+        .then( async(res) => {
+          const json = await res.json()
+        if(res.status !== 201){
+          setMessage(json.error)
+          return
+        }
+        setisLogin(true)
+        setMessage("Udana rejestracja, możliwe logowanie")
+      })
         .catch( (error) => console.log(error) ) 
       }
     }
@@ -30,6 +47,7 @@ window.location = "/";
     return (
         <div className="container">
           <div className="logo">Smartsensify</div>
+          <div >{message}</div>
           {isLogin?
             <div>
             
@@ -60,6 +78,7 @@ window.location = "/";
             <p>
               <a href="#">Zapomniałeś hasła?</a> | <button onClick={()=>setisLogin(!isLogin)}>{isLogin ? "Nie masz konta?" : "Zaloguj się!" }</button>
             </p>
+            
           </div>
         </div>
       );

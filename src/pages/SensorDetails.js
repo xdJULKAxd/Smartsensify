@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './SensorDetailsStyle.css';
-import {GetSensor} from '../servises/API'
+import {GetSensor, SensorData} from '../servises/API'
 
 
 
 export function SensorDetails() {
   const { id } = useParams();
   const [sensor, setSensor] = useState({ name: '', isPublic: false });
-
+const[readings, setReadings] = useState([])
 
 
 
 
   useEffect(() => {
      GetSensor(id).then( result =>{
-      
+      SensorData(id).then(data=>{ 
+      //setReadings(data)  
+      console.log(data.map(item=>))
+      })
 setSensor(result.sensor)
      })
    
@@ -35,6 +38,7 @@ setSensor(result.sensor)
       <div class="bottom-bar">
       <button className="deleteSensor"> Usuń sensor</button>
       </div>
+      {readings}
       <div className="background"> </div>
       
     </div>

@@ -22,7 +22,7 @@ export function AddNewSensor() {
       const data = await response.json();
       navigate(`/sensor/${data.sensor._id}`);
     } else {
-   console.log(response)
+      console.log(response)
     }
   };
 

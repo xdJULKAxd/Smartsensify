@@ -14,7 +14,7 @@ export function Sidebar({isSidebarVisible}) {
     const toggleVisibility = () => {
       setIsVisible(false);
     }
-  
+     
     return (
       <div className={`sidebar ${isvisible ? 'visible' : 'hidden'}`}>
         <button onClick={toggleVisibility}className="arrow"><i class="fa-solid fa-arrow-right"></i></button>
