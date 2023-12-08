@@ -56,3 +56,15 @@ export async function SensorData(id){
   console.log(response);
   return response.json();
 }
+
+export async function DeleteSensor(id){
+  const token = localStorage.getItem("token")
+  const response = await fetch (`https://smartsensify.onrender.com/api/sensors/${id}` , {
+    method: 'DELETE',
+    headers: {
+      'Authorization': token
+    },
+  });
+  console.log(response);
+  return response.json();
+}
