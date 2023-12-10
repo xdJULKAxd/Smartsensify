@@ -5,6 +5,7 @@ import "./sidebarStyle.css"
 export function Sidebar({isSidebarVisible}) {
     const [isvisible, setIsVisible] = useState(false);
     useEffect(()=>{setIsVisible( isSidebarVisible )
+      
 
     },[isSidebarVisible]
     
@@ -20,7 +21,7 @@ export function Sidebar({isSidebarVisible}) {
         <button onClick={toggleVisibility}className="arrow"><i class="fa-solid fa-arrow-right"></i></button>
         <div className="nav-links">
           <div className='icon'><i className="fa-solid fa-user icon-user"></i></div>
-          <li className="login">Zaloguj</li>
+          <li className="login">Zaloguj się</li>
         <div><i className="fa-solid fa-map"> </i><a href="default.asp">Mapa</a></div>
     <div><i className="fa-solid fa-chart-simple"></i><a href="about.asp">Analiza danych</a></div>
     <div><i className="fa-solid fa-magnifying-glass"></i><a href="news.asp">Czujniki</a></div>

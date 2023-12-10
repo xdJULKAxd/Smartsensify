@@ -1,19 +1,8 @@
-/* Styl dla informacji czy czujnik jest publiczny */
-.public-info {
-  font-size: 18px;
-  font-style: italic;
-  color: #010000;
-  text-align: left;
-  margin: 20px;
-  line-height: 1.5;
-  
 
-  
- 
-}
-.typ {
+.typ,
+.public-info {
+  font-family:  Verdana, sans-serif;
   font-size: 18px;
-  font-weight: bold;
   color: #010000;
   text-align: left;
   margin: 20px;
@@ -21,8 +10,8 @@
   
 }
 .sensor-name {
+  font-family:  Verdana, sans-serif;
   font-size: 24px;
-  font-weight: bold;
   color:#010000;
   text-align: left;
   margin: 20px;
@@ -32,7 +21,8 @@
 
 
 .name{
-  font-size: 24px;
+   font-family:Verdana,sans-serif;
+  font-size: 28px;
   font-weight: bold;
   color: #010000;
   text-align: left;
@@ -41,19 +31,23 @@
 }
 .deleteSensor{
   font-weight: bold;
-  color: #ffffff;
+  color: #020101;
   padding: 24px;
-  border-radius: 8px;
-  background-color: #bd2828;
-  position: absolute;
-  bottom: 20px;
+  border-radius: 10px;
+  background-color: #93bf85;
+  position: fixed;
+  bottom: 40px;
   height: 70px;
-  left: 50%;
-  transform: translateX(-50px);
+right:10px;
+margin-right: 10px;
+justify-content: center;
+border: none; /* Usuwa obramowanie przycisków */
+  margin: 0; /* Usuwa marginesy przycisków */
+  
 }
 .background{
   
-  background-color: #9e9494;
+  background-color:#dbead5;
   position: fixed;
   top: 0;
   bottom: 0;

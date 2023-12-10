@@ -12,7 +12,7 @@ import { LineChart,Line, XAxis,YAxis } from 'recharts';
 export function SensorDetails() {
   const { id } = useParams();
   const [sensor, setSensor] = useState({ name: '', isPublic: false });
-const[readings, setReadings] = useState([])
+const[readings, setReadings] = useState([]);
 
 
 

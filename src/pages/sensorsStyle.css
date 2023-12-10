@@ -1,7 +1,7 @@
 
 .name {
  font-size:24px;
- font-style:italic ; 
+ font-family:Verdana ; 
  display: flex;
  justify-content: center; 
  align-items: center; 
@@ -11,7 +11,7 @@
     padding: 10px;
     margin: 10px;
     background-color: #f0f0f0;
-    font-style:italic ; 
+    font-family: Verdana ; 
     
   }
   .bottom-plus{
@@ -23,15 +23,16 @@
   }
   
   .sensor-0{
-    background-color: #dc97cb;
+    background-color: #646464;
   }
   
   
   .sensor-1 {
-    background-color: #8b7a83;
+    background-color:#acacac;
   }
   
  .information{
+  font-family: Verdana;
   border-radius: 8px;
   text-align: right;
   color:#fafffa;

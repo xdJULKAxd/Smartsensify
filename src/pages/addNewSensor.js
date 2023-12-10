@@ -26,21 +26,21 @@ export function AddNewSensor() {
     }
   };
 
-  return (
+  return(
     <div>
-      <div className="nowy"></div>
-      <h2>Dodaj nowy czujnik</h2>
-      <form onSubmit={handleSubmit}>
-  
+      <div className="custom-header">Dodaj nowy czujnik</div>
+      <form onSubmit={handleSubmit} className="custom-form">
         <label>
-        <div className="nazwa">Nazwa czujnika</div>
-          <input type="text" value={sensorName} onChange={(e) => setSensorName(e.target.value)} /> 
+          <div className="nazwa">Nazwa czujnika</div>
+          <input type="text" value={sensorName} onChange={(e) => setSensorName(e.target.value)} />
         </label>
         <label>
-         <input type="checkbox" checked={isPublic} onChange={() => setIsPublic(!isPublic)} />
-        <div className="publiczny">Publiczny:</div> 
+          <input type="checkbox" checked={isPublic} onChange={() => setIsPublic(!isPublic)} />
+          <div className="publiczny">Publiczny:</div>
         </label>
-        <button type="submit"class="custom">Dodaj czujnik</button>
+        <button type="submit" className="custom-button">
+          Dodaj czujnik
+        </button>
       </form>
     </div>
   );

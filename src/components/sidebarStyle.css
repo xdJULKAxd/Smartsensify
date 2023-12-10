@@ -1,4 +1,5 @@
 .sidebar{
+  font-family:  Verdana, sans-serif;
     position: fixed;
     top:0;
     height: 100vh;
@@ -6,7 +7,7 @@
     width: 300px;
     border: 1px solid black;
     transition: 350ms;
-    background-color: rgb(154, 195, 211);
+    background-color:#c0c0c0;
     z-index: 9990;
     font-weight: bold;
   font-style:italic ; 
@@ -32,6 +33,7 @@
    
 }
 .login{
+  font-family:  Verdana, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,13 +49,17 @@
 .arrow{
   font-size: 45px;
   color:rgb(6, 12, 7);
-  background-color:#5b99dc;
-border-radius: 20%;
+  background-color:#93bf85;
 font-weight: bold;
 border: none;
+border-radius: 10px;
+position: fixed;
+top: 10px; /* Przesunięcie do góry */
+left: 10px; /* Przesunięcie w lewo */
 
 }
 .bottom-link {
+  font-family:  Verdana, sans-serif;
   position: absolute;
   left: 0;
   bottom: 0;
