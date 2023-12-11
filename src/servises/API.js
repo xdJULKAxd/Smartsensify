@@ -23,7 +23,7 @@ export async function GetSensor(id){
     method: 'GET',
   });
   console.log(response);
-  return response.json();
+  return [ await response.json(), response.status ] 
 }
 
 
@@ -66,5 +66,5 @@ export async function DeleteSensor(id){
     },
   });
   console.log(response);
-  return response.json();
+  return response.status
 }

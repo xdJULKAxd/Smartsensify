@@ -1,15 +1,22 @@
 import "./sensorsStyle.css"
 import React from 'react';
-import { useEffect, useState} from "react";
+import { useEffect, useState, useContext} from "react";
 import { GetSensors } from "../servises/API";
+import { loginContext } from './layout';
 export function Sensors() {
 
   const [sensors, setSensors] = useState( []);
+  const {isLogin} = useContext(loginContext)
   
   useEffect(() => {
     GetSensors().then( result =>{
+      if(isLogin){
+        setSensors(result.sensors)  
+      }
+      else{
+        setSensors(result.sensors.filter((sensor)=>sensor.isPublic))
+      }
       console.log(result)
-setSensors(result.sensors)  
     })
   
  }, []);

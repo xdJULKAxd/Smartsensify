@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import "./loginPagesStyle.css";
 import { SendAuthorization, CreatAccount } from "../servises/API";
+import { loginContext } from './layout';
 export function LoginPages() {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [username, setName] = useState("");
   const [isLogin, setisLogin] = useState(true);
   const [message, setMessage] = useState("");
+  const loginCont = useContext(loginContext)
   function send() {
     if (isLogin) {
       SendAuthorization({ identifier: login, password })
@@ -16,7 +18,7 @@ export function LoginPages() {
             setMessage(json.error);
             return;
           }
-
+          loginCont.setIsLogin(true)
           localStorage.setItem("token", json.token);
           window.location = "/";
         })
