@@ -1,5 +1,6 @@
 import "./sensorsStyle.css"
 import React from 'react';
+import { Link } from "react-router-dom";
 import { useEffect, useState, useContext} from "react";
 import { GetSensors } from "../servises/API";
 import { loginContext } from './layout';
@@ -53,10 +54,12 @@ export function Sensors() {
       </div>
       
     ))}
-   
+     <Link to="/newsensor">
     <div className="bottom-plus">
       <i className="fa-solid fa-plus"></i>
       </div>
+       </Link>
+
   </div>
   
 );
