@@ -9,7 +9,7 @@ export function AddNewSensor() {
   const [sensorName, setSensorName] = useState('');
   const [isPublic, setIsPublic] = useState(true);
   const[sensorType, setSensorType] = useState();
-  const {isLogin} = useContext(loginContext);
+  const isLogin = useContext(loginContext);
   const[message,setMessage] = useState();
 console.log(isLogin)
   const handleSubmit = async (e) => {
@@ -39,7 +39,7 @@ setMessage("Musisz być zalogowany by stworzyc sensor")
     <div>
       <div>{message}</div>
       <div className="custom-header">Dodaj nowy czujnik</div>
-      <form onSubmit={handleSubmit} className="custom-form">
+      {/* <form onSubmit={handleSubmit} className="custom-form"> */}
         <label>
           <div className="nazwa">Nazwa czujnika</div>
           <input type="text" value={sensorName} onChange={(e) => setSensorName(e.target.value)} />
@@ -52,10 +52,10 @@ setMessage("Musisz być zalogowany by stworzyc sensor")
           <input type="checkbox" checked={isPublic} onChange={() => setIsPublic(!isPublic)} />
           <div className="publiczny">Publiczny:</div>
         </label>
-        <button type="submit" className="custom-button">
+        <button onClick={handleSubmit} className="custom-button">
           Dodaj czujnik
         </button>
-      </form>
+      {/* </form> */}
     </div>
   );
 }

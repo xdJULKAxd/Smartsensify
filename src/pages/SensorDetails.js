@@ -14,7 +14,7 @@ export function SensorDetails() {
   const [sensor, setSensor] = useState();
 const[readings, setReadings] = useState([[{name: 'Page A', uv: 4000, pv: 2400, amt: 2400}]]);
 const[message, setMessage] = useState();
-const {isLogin} = useContext(loginContext)
+const isLogin = useContext(loginContext)
 
 
 
@@ -65,8 +65,9 @@ break
         return 
       }
       SensorData(id).then(data=>{ 
+        console.log(data)
       setReadings(data.map(ConvertToReading)) 
-      console.log(data.map(ConvertToReading))
+      
       })
 setSensor(result.sensor)
 setMessage("")

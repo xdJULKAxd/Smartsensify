@@ -13,14 +13,24 @@ export async function CreatSensor(sensorData){
     return response;
 }
 export async function GetSensors(){
+  const token = localStorage.getItem("token")
   const response = await fetch ('https://smartsensify.onrender.com/api/sensors' , {
     method: 'GET', 
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': token
+    },
   });
   return response.json();
 }
 export async function GetSensor(id){
+  const token = localStorage.getItem("token")
   const response = await fetch (`https://smartsensify.onrender.com/api/sensors/${id}` , {
     method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': token
+    },
   });
   console.log(response);
   return [ await response.json(), response.status ] 
@@ -50,8 +60,13 @@ export async function CreatAccount(registrationData){
   return response;
 }
 export async function SensorData(id){
+  const token = localStorage.getItem("token")
   const response = await fetch (`https://smartsensify.onrender.com/api/sensors/${id}/data` , {
     method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': token
+    },
   });
   console.log(response);
   return response.json();

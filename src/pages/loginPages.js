@@ -18,7 +18,7 @@ export function LoginPages() {
             setMessage(json.error);
             return;
           }
-          loginCont.setIsLogin(true)
+          
           localStorage.setItem("token", json.token);
           window.location = "/";
         })

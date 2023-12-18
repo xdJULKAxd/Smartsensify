@@ -7,7 +7,7 @@ import { loginContext } from './layout';
 export function Sensors() {
 
   const [sensors, setSensors] = useState( []);
-  const {isLogin} = useContext(loginContext)
+  const isLogin = useContext(loginContext)
   
   useEffect(() => {
     GetSensors().then( result =>{
@@ -47,10 +47,8 @@ export function Sensors() {
          
           
         </ul>
-        {(index === 0 || index === 1) && ( // Warunek dla sensor-0 i sensor-1
-            <button className="information">Więcej informacji</button>
-          )}
-          
+        {(index === 0 || index === 1) }
+           <button className="information">Więcej informacji</button>
       </div>
       
     ))}
