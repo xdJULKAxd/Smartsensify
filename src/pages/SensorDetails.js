@@ -15,9 +15,20 @@ export function SensorDetails() {
 const[readings, setReadings] = useState([[{name: 'Page A', uv: 4000, pv: 2400, amt: 2400}]]);
 const[message, setMessage] = useState();
 const isLogin = useContext(loginContext)
+const readingsraw = {data:[]}
 
 
-
+function setDensity(step){
+  const array = [] 
+  console.log(readingsraw)
+ const raw  = JSON.parse(localStorage.getItem("raw"))
+  for (let index = 0; index < raw.length; index+=step) {
+    const element = raw[index];
+   array.push(element) 
+  }
+  console.log(array)
+  setReadings(array)
+}
 
 function ConvertToReading(SensorData){
 return{
@@ -66,8 +77,8 @@ break
       }
       SensorData(id).then(data=>{ 
         console.log(data)
-      setReadings(data.map(ConvertToReading)) 
-      
+      localStorage.setItem("raw",JSON.stringify(data.map(ConvertToReading) )) 
+      setDensity(50)
       })
 setSensor(result.sensor)
 setMessage("")
@@ -90,12 +101,14 @@ setMessage("")
       <p className="public-info">Publiczny: {sensor.isPublic ? 'Tak' : 'Nie'}</p>
       {/* {sensor.type} */}
       <p className="typ"> Typ :{ sensor.type ? sensor.type.map( oneType => <p>{oneType}</p>) : <></>} </p> 
+      <button onClick={()=>setDensity(1)}>Ustaw stopień gęsty</button>
+          <button onClick={()=>setDensity(20)}>Ustaw stopień średni</button>
+          <button onClick={()=>setDensity(40)}>Ustaw stopień rzadki</button>
       <LineChart data={readings} width={1200} height={600}margin={{ top: 5, right: 20, bottom: 5, left: 0 }} > 
       <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
       <Area type="monotone" dataKey="uv" stackId="1" stroke="#8884d8" fill="#8884d8" />
           <Area type="monotone" dataKey="pv" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
-          
          
     <Bar dataKey="uv" fill="#8884d8" barSize={30} />
    
