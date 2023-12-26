@@ -1,13 +1,32 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useContext, useReducer } from "react";
+import { Link, useNavigate} from "react-router-dom";
 import "./sidebarStyle.css";
+import { loginContext } from "../pages/layout";
 
+
+function useForceUpdate() {
+  const [ignored, forceUpdate] = useReducer(x => x + 1, 0);
+  return () => forceUpdate();
+}
 export function Sidebar({ isSidebarVisible }) {
   const [isvisible, setIsVisible] = useState(false);
+  const isLogin = useContext(loginContext)
+  const handleForceupdateMethod = useForceUpdate();
+  const navigate = useNavigate();
   useEffect(() => {
     setIsVisible(isSidebarVisible);
   }, [isSidebarVisible]);
 
+  
+
+  function Login (){
+    if(isLogin){
+      localStorage.removeItem("token"); 
+      handleForceupdateMethod();
+    }
+else{ navigate("/login") }
+
+  }
   const toggleVisibility = () => {
     setIsVisible(false);
   };
@@ -21,7 +40,7 @@ export function Sidebar({ isSidebarVisible }) {
         <div className="icon">
           <i className="fa-solid fa-user icon-user"></i>
         </div>
-        <Link to="/login">Zaloguj się</Link>
+        <button onClick={()=>Login()}>{isLogin? "Wyloguj się":"Zaloguj się" } </button>
         <div>
           <i className="fa-solid fa-map"> </i>
           <Link to="/">Mapa</Link>
