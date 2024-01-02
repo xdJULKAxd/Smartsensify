@@ -10,7 +10,7 @@ function useForceUpdate() {
 }
 export function Sidebar({ isSidebarVisible }) {
   const [isvisible, setIsVisible] = useState(false);
-  const isLogin = useContext(loginContext)
+  const {isLogin,setIsLogin} = useContext(loginContext)
   const handleForceupdateMethod = useForceUpdate();
   const navigate = useNavigate();
   useEffect(() => {
@@ -22,7 +22,7 @@ export function Sidebar({ isSidebarVisible }) {
   function Login (){
     if(isLogin){
       localStorage.removeItem("token"); 
-      handleForceupdateMethod();
+      setIsLogin(false);
     }
 else{ navigate("/login") }
 

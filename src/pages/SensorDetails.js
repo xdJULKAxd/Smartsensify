@@ -4,7 +4,7 @@ import './SensorDetailsStyle.css';
 import {GetSensor, SensorData,DeleteSensor} from '../servises/API'
 import { Area, LineChart,Line, XAxis,YAxis,Tooltip, Bar, CartesianGrid} from 'recharts';
 import { loginContext } from './layout';
-
+import { toast } from 'react-toastify';
 
 
 
@@ -14,9 +14,19 @@ export function SensorDetails() {
   const [sensor, setSensor] = useState();
 const[readings, setReadings] = useState([[{name: 'Page A', uv: 4000, pv: 2400, amt: 2400}]]);
 const[message, setMessage] = useState();
-const isLogin = useContext(loginContext)
+const {isLogin,setIsLogin} = useContext(loginContext)
 const readingsraw = {data:[]}
 
+toast.success('🦄 Wow so easy!', {
+  position: "top-center",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "dark",
+  });
 
 function setDensity(step){
   const array = [] 

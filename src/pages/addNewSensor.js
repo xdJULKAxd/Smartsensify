@@ -9,7 +9,7 @@ export function AddNewSensor() {
   const [sensorName, setSensorName] = useState('');
   const [isPublic, setIsPublic] = useState(true);
   const[sensorType, setSensorType] = useState();
-  const isLogin = useContext(loginContext);
+  const {isLogin,setIsLogin} = useContext(loginContext);
   const[message,setMessage] = useState();
 console.log(isLogin)
   const handleSubmit = async (e) => {

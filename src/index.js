@@ -11,6 +11,7 @@ import{Sensors}from './pages/sensors';
 import {SensorDetails }from './pages/SensorDetails';
 import { LoginPages } from './pages/loginPages';
 import{AddNewSensor} from './pages/addNewSensor';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -31,4 +32,5 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+serviceWorkerRegistration.unregister();
 reportWebVitals();

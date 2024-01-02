@@ -7,7 +7,7 @@ import { loginContext } from './layout';
 export function Sensors() {
 
   const [sensors, setSensors] = useState( []);
-  const isLogin = useContext(loginContext)
+  const {isLogin,setIsLogin} = useContext(loginContext)
   
   useEffect(() => {
     GetSensors().then( result =>{
