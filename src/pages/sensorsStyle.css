@@ -22,31 +22,21 @@
     
   }
   
-  .sensor-0{
-    background-color: #646464;
-  }
-  
-  
-  .sensor-1 {
-    background-color:#acacac;
-  }
-  
- .information{
+  .information {  
   font-family: Verdana;
   border-radius: 8px;
-  text-align: right;
-  color:#fafffa;
-  background-color:#0a5c0a;
+  text-align: center; /* Tekst na środku przycisku */
+  color: #000000;
+  background-color: #0a5c0a;
   outline: none;
   height: 60px;
   width: 150px;
-  top: 250px; /* Przykładowa wartość dla odległości od góry strony */
-  right: 459px;
+  top: 70%; /* Ustawienie w połowie wysokości ekranu */
+  right: 20px;
+  transform: translateY(-80%); /* Przesunięcie przycisku o połowę jego własnej wysokości w górę, aby być dokładnie na środku */
   font-size: 15px;
   font-style: italic;
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  
- } 
+  }

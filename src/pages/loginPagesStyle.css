@@ -6,7 +6,8 @@ body {
   
   .container {
     max-width: 900px;
-    margin: 200px auto;
+    max-height: 700px;
+    margin: 50px auto;
     background-color:#848688;
     padding: 20px;
     border-radius: 8px;
@@ -24,11 +25,46 @@ body {
     position: relative;
 
   }
-
-  
   .footer {
     margin-top: 20px;
     font-size: 14px;
    
   }
-  
+  .login{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .register{
+    font-size: 24px;
+    font-weight: bold;
+
+  }
+  .info{
+    font-size: 18px;
+  }
+  .form-group input[type="password"] {
+    width: 50%; /* Rozciągnij input na całą szerokość rodzica */
+    padding: 15px 20px; /* Dostosuj padding według potrzeb */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Zaokrąglij rogi */
+    box-sizing: border-box; /* Uwzględnij padding i border w szerokości */
+    margin-bottom: 20px;
+  }
+  .login-button {
+    padding: 10px 20px; /* Dostosuj padding według potrzeb */
+    border-radius: 8px; /* Zaokrąglij rogi */
+    font-size: 20px; /* Dostosuj rozmiar czcionki według potrzeb */
+    cursor: pointer;
+    background-color:#6eaa5e;
+    color: #090909;
+    border: none;
+  }
+  .brakkonta{
+    padding: 10px 20px; /* Dostosuj padding według potrzeb */
+    border-radius: 8px; /* Zaokrąglij rogi */
+    font-size: 20px; /* Dostosuj rozmiar czcionki według potrzeb */
+    cursor: pointer;
+    background-color:#6eaa5e;
+    color: #090909;
+    border: none;
+  }

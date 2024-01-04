@@ -45,18 +45,17 @@ export function LoginPages() {
       <div >{message}</div>
       {isLogin?
         <div>
-        
-        <p> Zaloguj się</p>
+        <div className="login"> Zaloguj się</div>
         <div className="form-group">
           <input type="text" required value={login} onChange={(e) => setLogin(e.target.value)} placeholder="Email" />
         </div>
         <div className="form-group">
           <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Hasło" />
         </div>
-        <button onClick={send}>Zaloguj się teraz</button>
+        <button className="login-button" onClick={send}>Zaloguj się teraz</button>
       </div>:
       <div>
-        <p>Rejestracja</p>
+        <div className="register">Rejestracja</div>
         <div className="form-group">
           <input type="text" required value={login} onChange={(e) => setLogin(e.target.value)} placeholder="Email" />
         </div>
@@ -66,13 +65,17 @@ export function LoginPages() {
         <div className="form-group">
           <input type="text" required value={username} onChange={(e) => setName(e.target.value)} placeholder="Username" />
         </div>
-        <button onClick={send}>Zarejestruj się</button>
+        
+        <button  onClick={send}>Zarejestruj się</button>
+        
       </div>}
       <div className="footer">
-        <p>Cześć, miło cię poznać!</p>
+        <div className="info">Cześć, miło cię poznać!</div>
+        
         <p>
-          <a href="#">Zapomniałeś hasła?</a> | <button onClick={()=>setisLogin(!isLogin)}>{isLogin ? "Nie masz konta?" : "Zaloguj się!" }</button>
+          <a  className="info" href="#">Zapomniałeś hasła?</a> | <button className="brakkonta " onClick={()=>setisLogin(!isLogin)}>{isLogin ? "Nie masz konta?" : "Zaloguj się!" }</button>
         </p>
+       
         </div>
       </div>
     </div>

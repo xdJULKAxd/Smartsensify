@@ -39,8 +39,10 @@ else{ navigate("/login") }
       <div className="nav-links">
         <div className="icon">
           <i className="fa-solid fa-user icon-user"></i>
-        </div>
+        </div >
+        <div className="login button">
         <button onClick={()=>Login()}>{isLogin? "Wyloguj się":"Zaloguj się" } </button>
+        </div>
         <div>
           <i className="fa-solid fa-map"> </i>
           <Link to="/">Mapa</Link>
