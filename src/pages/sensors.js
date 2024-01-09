@@ -33,9 +33,10 @@ export function Sensors() {
           {sensor.type}<br/>
           {sensor.createdAt} <br/>
           {sensor.updatedAt}  <br/>
+
           </div>
           <div>
-            
+           < Link to={"/sensor/" + sensor._id}> przejdz do szczegółów czujnika </Link>
           </div>
         <ul>
           {/* {sensor.data.slice(0, 2).map((item) => (

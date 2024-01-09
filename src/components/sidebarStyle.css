@@ -14,6 +14,9 @@
   padding: 20px;
   font-size: 24px;
   line-height: 2.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
 .nav-links li{
@@ -36,14 +39,12 @@
   font-family:  Verdana, sans-serif;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 50px; 
+  justify-content: flex-end;
+  height: 100px; 
   font-weight: bold; /* Pogrubienie tekstu */
   font-style: italic; /* Styl kursywy */
-  font-size: 34px;
-  margin-right: 20px; 
-   
-  
+  font-size: 24px;
+  margin-top:auto;
 }
 
 .arrow{
@@ -81,9 +82,9 @@ left: 10px; /* Przesunięcie w lewo */
   font-weight: bold;
   font-style: italic;
   font-size: 24px; /* Adjust the font size as needed */
-  margin-right: 20px;
+  margin-right:20px;
   background-color: #93bf85; /* Set the background color */
-  color: #fff; /* Set the text color */
+  color: #0b0707; /* Set the text color */
   border: none;
   border-radius: 10px;
   padding: 10px 20px; /* Adjust padding as needed */

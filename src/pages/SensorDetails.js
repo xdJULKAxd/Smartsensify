@@ -5,6 +5,8 @@ import {GetSensor, SensorData,DeleteSensor} from '../servises/API'
 import { Area, LineChart,Line, XAxis,YAxis,Tooltip, Bar, CartesianGrid} from 'recharts';
 import { loginContext } from './layout';
 import { toast } from 'react-toastify';
+import { useGenerateImage } from 'recharts-to-png';
+import {FileSaver} from 'file-saver';
 
 
 
@@ -16,17 +18,21 @@ const[readings, setReadings] = useState([[{name: 'Page A', uv: 4000, pv: 2400, a
 const[message, setMessage] = useState();
 const {isLogin,setIsLogin} = useContext(loginContext)
 const readingsraw = {data:[]}
+const [getJpeg, { ref: chart }] = useGenerateImage({
+  quality: 0.8,
+  type: "image/jpeg",
+});
 
-toast.success('🦄 Wow so easy!', {
-  position: "top-center",
-  autoClose: 5000,
-  hideProgressBar: false,
-  closeOnClick: true,
-  pauseOnHover: true,
-  draggable: true,
-  progress: undefined,
-  theme: "dark",
-  });
+// toast.success('🦄 Wow so easy!', {
+//   position: "top-center",
+//   autoClose: 5000,
+//   hideProgressBar: false,
+//   closeOnClick: true,
+//   pauseOnHover: true,
+//   draggable: true,
+//   progress: undefined,
+//   theme: "dark",
+//   });
 
 function setDensity(step){
   const array = [] 
@@ -44,9 +50,12 @@ function ConvertToReading(SensorData){
 return{
   dataodczytu:SensorData.timestamp,
   temperatura:SensorData.readings[0].value
-
-  
-
+}
+}
+async function getChart(){
+  const jpeg = await getJpeg();
+if (jpeg) {
+  FileSaver.saveAs(jpeg, "div-element.jpeg");
 }
 }
 
@@ -111,10 +120,10 @@ setMessage("")
       <p className="public-info">Publiczny: {sensor.isPublic ? 'Tak' : 'Nie'}</p>
       {/* {sensor.type} */}
       <p className="typ"> Typ :{ sensor.type ? sensor.type.map( oneType => <p>{oneType}</p>) : <></>} </p> 
-      <button onClick={()=>setDensity(1)}>Ustaw stopień gęsty</button>
-          <button onClick={()=>setDensity(20)}>Ustaw stopień średni</button>
-          <button onClick={()=>setDensity(40)}>Ustaw stopień rzadki</button>
-      <LineChart data={readings} width={1200} height={600}margin={{ top: 5, right: 20, bottom: 5, left: 0 }} > 
+      <button onClick={()=>setDensity(20)}>Ustaw stopień gęsty</button>
+          <button onClick={()=>setDensity(40)}>Ustaw stopień średni</button>
+          <button onClick={()=>setDensity(60)}>Ustaw stopień rzadki</button>
+      <LineChart ref={chart} data={readings} width={1200} height={600}margin={{ top: 5, right: 20, bottom: 5, left: 0 }} > 
       <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
       <Area type="monotone" dataKey="uv" stackId="1" stroke="#8884d8" fill="#8884d8" />
@@ -129,6 +138,7 @@ setMessage("")
       <YAxis> </YAxis>
       <Line dataKey="temperatura" stroke='#000000'> </Line>
         </LineChart>
+        <button onClick={getChart}>pobierz wykres</button>
       <div class="bottom-bar">
       <button className="deleteSensor" onClick={Delete}> Usuń sensor</button>
       </div>

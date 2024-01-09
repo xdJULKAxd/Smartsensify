@@ -45,7 +45,7 @@ export function LoginPages() {
       <div >{message}</div>
       {isLogin?
         <div>
-        <div className="login"> Zaloguj się</div>
+        <div className="login1"> Zaloguj się</div>
         <div className="form-group">
           <input type="text" required value={login} onChange={(e) => setLogin(e.target.value)} placeholder="Email" />
         </div>
@@ -59,10 +59,10 @@ export function LoginPages() {
         <div className="form-group">
           <input type="text" required value={login} onChange={(e) => setLogin(e.target.value)} placeholder="Email" />
         </div>
-        <div className="form-group">
+        <div className="form-group1">
           <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Hasło" />
         </div>
-        <div className="form-group">
+        <div className="form-group2">
           <input type="text" required value={username} onChange={(e) => setName(e.target.value)} placeholder="Username" />
         </div>
         

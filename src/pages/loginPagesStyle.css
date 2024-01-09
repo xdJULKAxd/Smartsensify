@@ -21,7 +21,17 @@ body {
   }
   
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    position: relative;
+
+  }
+  .form-group1 {
+    margin-bottom: 24px;
+    position: relative;
+
+  }
+  .form-group2 {
+    margin-bottom: 24px;
     position: relative;
 
   }
@@ -30,9 +40,10 @@ body {
     font-size: 14px;
    
   }
-  .login{
+  .login1{
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 10px;
   }
   .register{
     font-size: 24px;
