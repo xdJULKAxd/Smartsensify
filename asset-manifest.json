@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/Smartsensify/static/css/main.beaab575.css",
-    "main.js": "/Smartsensify/static/js/main.a1b7db28.js",
-    "static/js/787.994511a4.chunk.js": "/Smartsensify/static/js/787.994511a4.chunk.js",
+    "main.css": "/Smartsensify/static/css/main.97b7c85d.css",
+    "main.js": "/Smartsensify/static/js/main.d4bb80f8.js",
+    "static/js/787.972fba8a.chunk.js": "/Smartsensify/static/js/787.972fba8a.chunk.js",
+    "service-worker.js": "/Smartsensify/service-worker.js",
     "static/media/logo.png": "/Smartsensify/static/media/logo.e5f2dc64097a1ccd73f0.png",
     "index.html": "/Smartsensify/index.html",
-    "main.beaab575.css.map": "/Smartsensify/static/css/main.beaab575.css.map",
-    "main.a1b7db28.js.map": "/Smartsensify/static/js/main.a1b7db28.js.map",
-    "787.994511a4.chunk.js.map": "/Smartsensify/static/js/787.994511a4.chunk.js.map"
+    "main.97b7c85d.css.map": "/Smartsensify/static/css/main.97b7c85d.css.map",
+    "main.d4bb80f8.js.map": "/Smartsensify/static/js/main.d4bb80f8.js.map",
+    "787.972fba8a.chunk.js.map": "/Smartsensify/static/js/787.972fba8a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.beaab575.css",
-    "static/js/main.a1b7db28.js"
+    "static/css/main.97b7c85d.css",
+    "static/js/main.d4bb80f8.js"
   ]
 }
