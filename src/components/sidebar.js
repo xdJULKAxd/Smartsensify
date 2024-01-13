@@ -56,18 +56,14 @@ else{ navigate("/login") }
          <Link to="/newsensor">Stwórz czujnik</Link>
         </div>
         <div>
-          <i className="fa-solid fa-envelope"></i>
-          <a href="contact.asp">Powiadomienia</a>
-        </div>
-        <div>
           <i className="fa-solid fa-heart"></i>
-          <a href="about.asp">Ocena aplikacji</a>
+          <Link to="/opinion">Ocena aplikacji</Link>
         </div>
       </div>
       <div className="bottom-link">
         <div>
           <i className ="fa-solid fa-gears"></i>
-          <a href="about.asp">Ustawienia</a>
+          <Link to="/help">Pomoc</Link>
         </div>
       </div>
     </div>

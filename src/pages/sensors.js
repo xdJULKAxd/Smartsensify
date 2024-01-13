@@ -49,7 +49,7 @@ export function Sensors() {
           
         </ul>
         {(index === 0 || index === 1) }
-           <button className="information">Więcej informacji</button>
+           
       </div>
       
     ))}

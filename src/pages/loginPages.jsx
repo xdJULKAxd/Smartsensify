@@ -2,6 +2,9 @@ import { useState,useContext } from "react";
 import "./loginPagesStyle.css";
 import { SendAuthorization, CreatAccount } from "../servises/API";
 import { loginContext } from './layout';
+import { toastConstant } from '../Constants';
+import { toast } from "react-toastify";
+import Spiner from '../images/12-dots-scale-rotate.svg?react';
 export function LoginPages() {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
@@ -9,7 +12,9 @@ export function LoginPages() {
   const [isLogin, setisLogin] = useState(true);
   const [message, setMessage] = useState("");
   const loginCont = useContext(loginContext)
+  const [loading,setLoading]= useState(false);
   function send() {
+    setLoading(true)
     if (isLogin) {
       SendAuthorization({ identifier: login, password })
         .then(async (res) => {
@@ -31,8 +36,9 @@ export function LoginPages() {
             setMessage(json.error);
             return;
           }
+          setLoading(false)
           setisLogin(true);
-          setMessage("Udana rejestracja, możliwe logowanie");
+          toast.success("Udana rejestracja, możliwe logowanie",toastConstant);
         })
         .catch((error) => console.log(error));
     }
@@ -43,6 +49,7 @@ export function LoginPages() {
       <div className="logo">Smartsensify</div>
     <div className="container">
       <div >{message}</div>
+      {loading && (<img src={Spiner} alt="Your SVG" />)}
       {isLogin?
         <div>
         <div className="login1"> Zaloguj się</div>
@@ -51,6 +58,7 @@ export function LoginPages() {
         </div>
         <div className="form-group">
           <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Hasło" />
+
         </div>
         <button className="login-button" onClick={send}>Zaloguj się teraz</button>
       </div>:

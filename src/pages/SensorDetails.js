@@ -5,9 +5,9 @@ import {GetSensor, SensorData,DeleteSensor} from '../servises/API'
 import { Area, LineChart,Line, XAxis,YAxis,Tooltip, Bar, CartesianGrid} from 'recharts';
 import { loginContext } from './layout';
 import { toast } from 'react-toastify';
-import { useGenerateImage } from 'recharts-to-png';
-import {FileSaver} from 'file-saver';
-
+import { useCurrentPng, useGenerateImage } from 'recharts-to-png';
+import FileSaver from 'file-saver';
+import { toastConstant } from '../Constants';
 
 
 
@@ -18,21 +18,9 @@ const[readings, setReadings] = useState([[{name: 'Page A', uv: 4000, pv: 2400, a
 const[message, setMessage] = useState();
 const {isLogin,setIsLogin} = useContext(loginContext)
 const readingsraw = {data:[]}
-const [getJpeg, { ref: chart }] = useGenerateImage({
-  quality: 0.8,
-  type: "image/jpeg",
-});
+const [getPng, { ref: chart }] = useCurrentPng();
 
-// toast.success('🦄 Wow so easy!', {
-//   position: "top-center",
-//   autoClose: 5000,
-//   hideProgressBar: false,
-//   closeOnClick: true,
-//   pauseOnHover: true,
-//   draggable: true,
-//   progress: undefined,
-//   theme: "dark",
-//   });
+
 
 function setDensity(step){
   const array = [] 
@@ -42,7 +30,6 @@ function setDensity(step){
     const element = raw[index];
    array.push(element) 
   }
-  console.log(array)
   setReadings(array)
 }
 
@@ -53,27 +40,27 @@ return{
 }
 }
 async function getChart(){
-  const jpeg = await getJpeg();
-if (jpeg) {
-  FileSaver.saveAs(jpeg, "div-element.jpeg");
+  const img = await getPng();
+if (img) {
+  FileSaver.saveAs(img, "div-element.png");
 }
 }
 
 async function Delete(){
   const status = await DeleteSensor (id)
   switch(status ){
-    case 403: setMessage("Brak uprawnień")
+    case 403: toast.error("Brak uprawnień",toastConstant)
      
      break
 case 200: {
-  setMessage("Pomyślnie usunięto")
+  toast.success("Pomyślnie usunięto",toastConstant)
 setSensor()
 break }
- case 401: setMessage("Brak autoryzacji,konieczność zalogowania się")
+ case 401: toast.error("Brak autoryzacji,konieczność zalogowania się",toastConstant)
 break
- case 404:setMessage("Nie znaleziono sensora")
+ case 404:toast.error("Nie znaleziono sensora",toastConstant)
 break
- default : setMessage("Wystąpił nicodzienny status "+ status)
+ default : toast.info("Wystąpił nicodzienny status "+ status ,toastConstant)
   }
  // window.location = "/sensors"
   
@@ -83,15 +70,15 @@ break
 
 
   useEffect(() => {
-    setMessage("Ładowanie...")
+    toast.info("Ładowanie...",toastConstant)
      GetSensor(id).then(( [result, status]) =>{
       console.log(result,status)
       if(status === 404){
-       setMessage("Nie znaleziono sensora") 
+       toast.error("Nie znaleziono sensora",toastConstant) 
        return 
       }
       if(!result.sensor.isPublic && !isLogin){
-        setMessage("Sensor prywatny") 
+       toast.info("Sensor prywatny",toastConstant) 
         return 
       }
       SensorData(id).then(data=>{ 
@@ -121,8 +108,8 @@ setMessage("")
       {/* {sensor.type} */}
       <p className="typ"> Typ :{ sensor.type ? sensor.type.map( oneType => <p>{oneType}</p>) : <></>} </p> 
       <button onClick={()=>setDensity(20)}>Ustaw stopień gęsty</button>
-          <button onClick={()=>setDensity(40)}>Ustaw stopień średni</button>
-          <button onClick={()=>setDensity(60)}>Ustaw stopień rzadki</button>
+          <button onClick={()=>setDensity(70)}>Ustaw stopień średni</button>
+          <button onClick={()=>setDensity(120)}>Ustaw stopień rzadki</button>
       <LineChart ref={chart} data={readings} width={1200} height={600}margin={{ top: 5, right: 20, bottom: 5, left: 0 }} > 
       <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
@@ -140,7 +127,7 @@ setMessage("")
         </LineChart>
         <button onClick={getChart}>pobierz wykres</button>
       <div class="bottom-bar">
-      <button className="deleteSensor" onClick={Delete}> Usuń sensor</button>
+      {isLogin && (<button className="deleteSensor" onClick={Delete}> Usuń sensor</button>)}
       </div>
       </div>
       ):(

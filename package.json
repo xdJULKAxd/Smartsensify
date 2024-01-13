@@ -1,5 +1,4 @@
-{
-  "version": "0.1.0",
+{"version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -50,3 +49,4 @@
     "react-router-dom": "^6.16.0"
   }
 }
+

@@ -11,12 +11,14 @@ import{Sensors}from './pages/sensors';
 import {SensorDetails }from './pages/SensorDetails';
 import { LoginPages } from './pages/loginPages';
 import{AddNewSensor} from './pages/addNewSensor';
+import{ Help } from './pages/help'; 
+import{ Opinion} from './pages/opinion'; 
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  //<React.StrictMode>
     <BrowserRouter>
     <Layout>
       <Routes>
@@ -25,12 +27,12 @@ root.render(
          <Route path="/sensor/:id" element={<SensorDetails/>}></Route> 
          <Route path="/login" element={<LoginPages/>}></Route>
          <Route path="/newsensor" element={<AddNewSensor/>}></Route>
-       
-      
+         <Route path="/help" element={<Help/>}></Route>
+         <Route path="/opinion" element={<Opinion/>}></Route>
       </Routes>
       </Layout>
     </BrowserRouter>
-  </React.StrictMode>
+ // </React.StrictMode>
 );
 serviceWorkerRegistration.unregister();
 reportWebVitals();
