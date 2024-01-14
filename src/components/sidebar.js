@@ -44,25 +44,25 @@ else{ navigate("/login") }
         <button onClick={()=>Login()}>{isLogin? "Wyloguj się":"Zaloguj się" } </button>
         </div>
         <div>
-          <i className="fa-solid fa-map"> </i>
+          <i className="fa-solid fa-map mr" > </i>
           <Link to="/">Mapa</Link>
         </div>
         <div>
-          <i className="fa-solid fa-chart-simple"></i>
+          <i className="fa-solid fa-chart-simple mr"></i>
           <Link to= "/sensors">Analiza danych</Link>
         </div>
         <div>
-          <i className="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid fa-magnifying-glass mr"></i>
          <Link to="/newsensor">Stwórz czujnik</Link>
         </div>
         <div>
-          <i className="fa-solid fa-heart"></i>
+          <i className="fa-solid fa-heart mr"></i>
           <Link to="/opinion">Ocena aplikacji</Link>
         </div>
       </div>
       <div className="bottom-link">
         <div>
-          <i className ="fa-solid fa-gears"></i>
+          <i className ="fa-solid fa-gears mr"></i>
           <Link to="/help">Pomoc</Link>
         </div>
       </div>

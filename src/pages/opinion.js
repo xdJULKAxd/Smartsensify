@@ -1,5 +1,7 @@
 import React, { useState }from "react";
 import "./opinionStyle.css";
+import { toast } from "react-toastify";
+import { toastConstant } from '../Constants';
 export function Opinion() {
     const [rating, setRating] = useState(null);
     const [message, setMessage] = useState("");
@@ -13,13 +15,10 @@ export function Opinion() {
     };
 
     const handleSubmit = () => {
-        // Tutaj możesz obsługiwać logikę przesyłania oceny na serwer itp.
-        // Możesz również użyć stanu "rating" i "message" w dowolny inny sposób.
-
-        // Resetowanie wartości po przesłaniu oceny
+    
         setRating(null);
         setMessage("");
-        alert("Dziękujemy za oddanie oceny!");
+        toast.success("Dziękujemy za oddanie oceny!",toastConstant );
     };
 
     return (

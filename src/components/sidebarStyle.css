@@ -90,3 +90,6 @@ left: 10px; /* Przesunięcie w lewo */
   padding: 10px 20px; /* Adjust padding as needed */
   cursor: pointer;
  }
+ .mr{
+  margin-right: 8px;
+ }
