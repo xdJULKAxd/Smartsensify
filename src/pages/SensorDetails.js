@@ -83,9 +83,12 @@ break
       }
       SensorData(id).then(data=>{ 
         console.log(data)
-      localStorage.setItem("raw",JSON.stringify(data.map(ConvertToReading) )) 
+        if(!data||data.error||data.length===0){
+          toast.warn("Brak odczytów",toastConstant)
+        }
+      else{localStorage.setItem("raw",JSON.stringify(data.map(ConvertToReading) )) 
       setDensity(20)
-      })
+     }})
 setSensor(result.sensor)
 setMessage("")
      })

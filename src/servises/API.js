@@ -1,7 +1,7 @@
 
 export async function CreatSensor(sensorData){
   const token = localStorage.getItem("token")
-    const response = await fetch ('https://smartsensify.onrender.com/api/sensors' , {
+    const response = await fetch ('https://smartsensifyv1.onrender.com/api/sensors' , {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -14,22 +14,25 @@ export async function CreatSensor(sensorData){
 }
 export async function GetSensors(){
   const token = localStorage.getItem("token")
-  const response = await fetch ('https://smartsensify.onrender.com/api/sensors' , {
+  
+  const response = await fetch ('https://smartsensifyv1.onrender.com/api/sensors' , {
     method: 'GET', 
     headers: {
-      'Content-Type': 'application/json',
-      'Authorization': token
-    },
+       'Content-Type': 'application/json',
+       'Authorization': 'Bearer '+token,
+       
+      },
   });
+  console.log(response)
   return response.json();
 }
 export async function GetSensor(id){
   const token = localStorage.getItem("token")
-  const response = await fetch (`https://smartsensify.onrender.com/api/sensors/${id}` , {
+  const response = await fetch (`https://smartsensifyv1.onrender.com/api/sensors/${id}` , {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': token
+      'Authorization': 'Bearer '+token
     },
   });
   console.log(response);
@@ -38,7 +41,7 @@ export async function GetSensor(id){
 
 
 export async function SendAuthorization(loginData){
-  const response = await fetch ('https://smartsensify.onrender.com/api/auth/login' , {
+  const response = await fetch ('https://smartsensifyv1.onrender.com/api/auth/login' , {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -49,7 +52,7 @@ export async function SendAuthorization(loginData){
   return response;
 }
 export async function CreatAccount(registrationData){
-  const response = await fetch ('https://smartsensify.onrender.com/api/auth/register' , {
+  const response = await fetch ('https://smartsensifyv1.onrender.com/api/auth/register' , {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -61,11 +64,11 @@ export async function CreatAccount(registrationData){
 }
 export async function SensorData(id){
   const token = localStorage.getItem("token")
-  const response = await fetch (`https://smartsensify.onrender.com/api/sensors/${id}/data` , {
+  const response = await fetch (`https://smartsensifyv1.onrender.com/api/sensors/${id}/data` , {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': token
+      'Authorization': 'Bearer '+token
     },
   });
   console.log(response);
@@ -74,10 +77,10 @@ export async function SensorData(id){
 
 export async function DeleteSensor(id){
   const token = localStorage.getItem("token")
-  const response = await fetch (`https://smartsensify.onrender.com/api/sensors/${id}` , {
+  const response = await fetch (`https://smartsensifyv1.onrender.com/api/sensors/${id}` , {
     method: 'DELETE',
     headers: {
-      'Authorization': token
+      'Authorization': 'Bearer '+token
     },
   });
   console.log(response);

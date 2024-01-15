@@ -48,7 +48,7 @@ setMessage("Musisz być zalogowany by stworzyc sensor")
           <div className="Typ">Typ(umieść typy pomiędzy przecinkami)</div>
           <input type="text" value={sensorType} onChange={(e) => setSensorType(e.target.value)} />
         </label>
-        <label> 
+        <label className="public-label ">
           <span className="publiczny">Publiczny:</span>
           <input style={{width:"40px",height:"40px"}} type="checkbox" checked={isPublic} onChange={() => setIsPublic(!isPublic)} />
         </label>

@@ -12,10 +12,10 @@ export function Sensors() {
   useEffect(() => {
     GetSensors().then( result =>{
       if(isLogin){
-        setSensors(result.sensors)  
+        setSensors(result.selectedSensors)  
       }
       else{
-        setSensors(result.sensors.filter((sensor)=>sensor.isPublic))
+        setSensors(result.selectedSensors.filter((sensor)=>sensor.isPublic))
       }
       console.log(result)
     })
@@ -25,7 +25,7 @@ export function Sensors() {
   <div>
     <div className="name">Lista czujników</div>
 
-    {sensors.map((sensor, index) => (
+    {sensors&&sensors.map((sensor, index) => (
       <div className={`sensorElement sensor-${index}`} key={sensor._id}>
         <h3>{sensor.name}</h3>
         <div>
