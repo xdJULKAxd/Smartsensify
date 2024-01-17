@@ -75,14 +75,12 @@
  
   }
   body{
-    margin: 0;
-    padding: 0;
+    
     background-image: url('../images/2.jpg');  /* Ścieżka do Twojego obrazu */
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
-    font-family: 'Times New Roman', Times, serif;
-    /* Dodatkowe style dla body, jeśli są potrzebne */
+    
+    
   }
   .custom-form {
     max-width: 600px;

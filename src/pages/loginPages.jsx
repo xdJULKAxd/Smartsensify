@@ -1,10 +1,11 @@
 import { useState,useContext } from "react";
 import "./loginPagesStyle.css";
-import { SendAuthorization, CreatAccount } from "../servises/API";
+import { SendAuthorization, CreatAccount,CreatGroupSensorIfNotExist } from "../servises/API";
 import { loginContext } from './layout';
 import { toastConstant } from '../Constants';
 import { toast } from "react-toastify";
 import Spiner from '../images/12-dots-scale-rotate.svg?react';
+
 export function LoginPages() {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
@@ -25,6 +26,7 @@ export function LoginPages() {
           }
           
           localStorage.setItem("token", json.token);
+        //  await CreatGroupSensorIfNotExist()
           window.location = "/";
         })
         .catch((error) => console.log(error));

@@ -32,6 +32,8 @@ else{ navigate("/login") }
   };
 
   return (
+    <div>
+      <div  onClick={toggleVisibility}className="sidebar-background"></div>
     <div className={`sidebar ${isvisible ? "visible" : "hidden"}`}>
       <button onClick={toggleVisibility} className="arrow">
         <i class="fa-solid fa-arrow-right"></i>
@@ -66,6 +68,7 @@ else{ navigate("/login") }
           <Link to="/help">Pomoc</Link>
         </div>
       </div>
+    </div>
     </div>
   );
 }
