@@ -12,6 +12,7 @@ export function Layout({ children }) {
 
 const centerStye = {
   textAlign: 'center',
+  
 }
 const [isLogin,setIsLogin] = useState(localStorage.getItem("token"))
 

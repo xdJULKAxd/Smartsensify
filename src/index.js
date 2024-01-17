@@ -29,6 +29,7 @@ root.render(
          <Route path="/newsensor" element={<AddNewSensor/>}></Route>
          <Route path="/help" element={<Help/>}></Route>
          <Route path="/opinion" element={<Opinion/>}></Route>
+         
       </Routes>
       </Layout>
     </BrowserRouter>

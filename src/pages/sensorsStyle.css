@@ -1,7 +1,7 @@
 
-.name {
- font-size:24px;
- font-family:Verdana ; 
+.name1 {
+ font-size:40px;
+ font-family:'Times New Roman', Times, serif;
  display: flex;
  justify-content: center; 
  align-items: center; 
@@ -11,7 +11,7 @@
     padding: 10px;
     margin: 10px;
     background-color: #f0f0f0;
-    font-family: Verdana ; 
+    font-family: 'Times New Roman', Times, serif;
     
   }
   .bottom-plus{
@@ -23,7 +23,7 @@
   }
   
   .information {  
-  font-family: Verdana;
+  font-family: 'Times New Roman', Times, serif;
   border-radius: 8px;
   text-align: center; /* Tekst na środku przycisku */
   color: #000000;
@@ -35,7 +35,6 @@
   right: 20px;
   transform: translateY(-80%); /* Przesunięcie przycisku o połowę jego własnej wysokości w górę, aby być dokładnie na środku */
   font-size: 15px;
-  font-style: italic;
   display: flex;
   align-items: center;
   justify-content: center;

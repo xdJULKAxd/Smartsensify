@@ -110,9 +110,9 @@ setMessage("")
       <p className="public-info">Publiczny: {sensor.isPublic ? 'Tak' : 'Nie'}</p>
       {/* {sensor.type} */}
       <p className="typ"> Typ :{ sensor.type ? sensor.type.map( oneType => <p>{oneType}</p>) : <></>} </p> 
-      <button onClick={()=>setDensity(50)}>Ustaw stopień gęsty</button>
-          <button onClick={()=>setDensity(20)}>Ustaw stopień średni</button>
-          <button onClick={()=>setDensity(2)}>Ustaw stopień rzadki</button>
+      <button className="buttonnew-style" onClick={()=>setDensity(50)}>Ustaw stopień gęsty</button>
+          <button className="buttonnew-style"onClick={()=>setDensity(20)}>Ustaw stopień średni</button>
+          <button className="buttonnew-style" onClick={()=>setDensity(2)}>Ustaw stopień rzadki</button>
       <LineChart ref={chart} data={readings} width={1200} height={600}margin={{ top: 5, right: 20, bottom: 5, left: 0 }} > 
       <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />

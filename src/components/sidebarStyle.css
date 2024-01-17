@@ -1,5 +1,5 @@
 .sidebar{
-  font-family:  Verdana, sans-serif;
+  font-family:'Times New Roman', Times, serif;
     position: fixed;
     top:0;
     height: 100vh;
@@ -10,7 +10,6 @@
     background-color:#c0c0c0;
     z-index: 9990;
     font-weight: bold;
-  font-style:italic ; 
   padding: 20px;
   font-size: 24px;
   line-height: 2.5;
@@ -19,71 +18,73 @@
   align-items: center;
 
 }
-.nav-links li{
-    margin-top: 30px;
+.nav-links{
+  font-size: 28px;
 }
 .icon{
   align-items: center;
   justify-content: center;
   display: flex;
- 
+  margin-top: 110px;
   
 }
 .icon-user{
-  margin:20px auto;
+  margin:10px auto;
+  margin-left:75px;
   display:block;
-  font-size: 85px;
+  font-size: 100px;
+
    
 }
 .login{
-  font-family:  Verdana, sans-serif;
+  font-family:'Times New Roman', Times, serif;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   height: 100px; 
   font-weight: bold; /* Pogrubienie tekstu */
-  font-style: italic; /* Styl kursywy */
-  font-size: 24px;
+  font-size: 28px;
   margin-top:auto;
 }
 
 .arrow{
-  font-size: 45px;
+  width: 65px;
+  height: 65px;
+  font-size: 50px;
   color:rgb(6, 12, 7);
-  background-color:#93bf85;
+  background-color:#469536;
 font-weight: bold;
 border: none;
 border-radius: 10px;
 position: fixed;
-top: 10px; /* Przesunięcie do góry */
-left: 10px; /* Przesunięcie w lewo */
+top: 20px; /* Przesunięcie do góry */
+left: 40px; /* Przesunięcie w lewo */
+cursor: pointer;
 
 }
 .bottom-link {
-  font-family:  Verdana, sans-serif;
+  font-family:  'Times New Roman', Times, serif;
   position: absolute;
-  left: 0;
+  left: 12%;
   bottom: 0;
   width: 100%;
   text-align: center;
   padding: 45px;
   font-weight: bold;
-  font-style: italic;
-  font-size: 24px;
-  align-items: center;
+  font-size: 28px;
   display: flex;
 }
  .login button{
-  font-family: Verdana, sans-serif;
+  font-family:'Times New Roman', Times, serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 70px;
+  width: 180px;
   font-weight: bold;
-  font-style: italic;
-  font-size: 24px; /* Adjust the font size as needed */
+  font-size: 24px; 
   margin-right:20px;
-  background-color: #93bf85; /* Set the background color */
+  background-color: #469536;
   color: #0b0707; /* Set the text color */
   border: none;
   border-radius: 10px;
@@ -93,3 +94,4 @@ left: 10px; /* Przesunięcie w lewo */
  .mr{
   margin-right: 8px;
  }
+ 

@@ -23,7 +23,7 @@ export function Sensors() {
  }, []);
  return (
   <div>
-    <div className="name">Lista czujników</div>
+    <div className="name1">Lista czujników</div>
 
     {sensors&&sensors.map((sensor, index) => (
       <div className={`sensorElement sensor-${index}`} key={sensor._id}>
@@ -36,7 +36,7 @@ export function Sensors() {
 
           </div>
           <div>
-           < Link to={"/sensor/" + sensor._id}> przejdz do szczegółów czujnika </Link>
+           < Link to={"/sensor/" + sensor._id}> Zobacz szczegóły czujnika</Link>
           </div>
         <ul>
           {/* {sensor.data.slice(0, 2).map((item) => (

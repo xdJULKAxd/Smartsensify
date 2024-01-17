@@ -1,5 +1,43 @@
-.help-container{
-    color: #000000;
-    font-size: 24px;
-    margin-bottom: 30px;
+.help-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Times New Roman', serif; /* Ustawienie czcionki na Times New Roman */
+}
+
+h1, h2 {
+  color: #4caf50; /* Jasny zielony */
+  font-family: 'Times New Roman', serif; /* Ustawienie czcionki na Times New Roman */
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+p {
+  color: #333; /* Czarny tekst */
+  font-size: 18px; /* Zwiększenie rozmiaru czcionki */
+  line-height: 1.6; /* Minimalny odstęp między wierszami */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Dodaj animację dla linków */
+a {
+  color: #4caf50; /* Jasny zielony */
+  transition: color 0.3s ease;
+  font-family: 'Times New Roman', serif; /* Ustawienie czcionki na Times New Roman */
+}
+
+a:hover {
+  color: #2e7d32; /* Ciemniejszy odcień zielonego po najechaniu myszką */
 }

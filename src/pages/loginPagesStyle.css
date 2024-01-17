@@ -12,14 +12,7 @@ body {
     padding: 20px;
     border-radius: 8px;
   }
-  
-  .logo {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    margin-top: 30px;
-  }
-  
+ 
   .form-group {
     margin-bottom: 24px;
     position: relative;
@@ -66,7 +59,7 @@ body {
     border-radius: 8px; /* Zaokrąglij rogi */
     font-size: 20px; /* Dostosuj rozmiar czcionki według potrzeb */
     cursor: pointer;
-    background-color:#6eaa5e;
+    background-color: #469536;
     color: #090909;
     border: none;
   }
@@ -75,7 +68,7 @@ body {
     border-radius: 8px; /* Zaokrąglij rogi */
     font-size: 20px; /* Dostosuj rozmiar czcionki według potrzeb */
     cursor: pointer;
-    background-color:#6eaa5e;
+    background-color: #469536;
     color: #090909;
     border: none;
   }

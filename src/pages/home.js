@@ -21,16 +21,21 @@ export function Home() {
         </Marker>
       </MapContainer>
       
-      <div className="maptoolbar">
+      
+        <div className="maptoolbar">
         {" "}
-        
+        <Link to="/sensors">
         <button className="sonsor">
-          <i className="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars"></i> 
         </button>
+        </Link>
+        <Link to="/">
         <button className="location">
         <i className="fa-solid fa-location-dot"></i>
         </button>
+        </Link>
       </div>
+    
     </div>
   );
 }

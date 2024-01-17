@@ -22,22 +22,22 @@ export function Opinion() {
     };
 
     return (
-        <div className="opinion-container">
-            <h1>Czy podoba Ci się nasza nowa strona?</h1>
-            <div>
-                <input type="radio" id="fajna" name="rating" value="fajna" onChange={() => handleRatingChange("fajna")} checked={rating === "fajna"} />
-                <label htmlFor="fajna">Jest bardzo fajna</label>
+        <div className="opinion-container-custom">
+            <h1 className="opinion-header">Czy podoba Ci się nasza nowa strona?</h1>
+            <div className="opinion-option">
+                <input type="radio" id="fajna" name="rating" value="fajna" onChange={() => handleRatingChange("fajna")} checked={rating === "fajna"} className="opinion-radio" />
+                <label htmlFor="fajna" className="opinion-label">Doskonale się prezentuje.</label>
             </div>
-            <div>
-                <input type="radio" id="srednia" name="rating" value="srednia" onChange={() => handleRatingChange("srednia")} checked={rating === "srednia"} />
-                <label htmlFor="srednia">Taka sobie</label>
+            <div className="opinion-option">
+                <input type="radio" id="srednia" name="rating" value="srednia" onChange={() => handleRatingChange("srednia")} checked={rating === "srednia"} className="opinion-radio" />
+                <label htmlFor="srednia" className="opinion-label">Może być lepsza.</label>
             </div>
-            <div>
-                <input type="radio" id="niepodoba" name="rating" value="niepodoba" onChange={() => handleRatingChange("niepodoba")} checked={rating === "niepodoba"} />
-                <label htmlFor="niepodoba">Nie podoba mi się</label>
+            <div className="opinion-option">
+                <input type="radio" id="niepodoba" name="rating" value="niepodoba" onChange={() => handleRatingChange("niepodoba")} checked={rating === "niepodoba"} className="opinion-radio" />
+                <label htmlFor="niepodoba" className="opinion-label">Nie spełnia moich oczekiwań.</label>
             </div>
-            <textarea placeholder="Dodaj komentarz..." value={message} onChange={handleMessageChange}></textarea>
-            <button onClick={handleSubmit}>Prześlij opinię</button>
+            <textarea placeholder="Dodaj komentarz..." value={message} onChange={handleMessageChange} className="opinion-textarea"></textarea>
+            <button onClick={handleSubmit} className="opinion-button">Prześlij opinię</button>
         </div>
     );
 }

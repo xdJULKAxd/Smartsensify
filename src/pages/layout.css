@@ -29,6 +29,5 @@ a:link {
 
 }
 main{
-  min-height: calc(100vh - 90px);
+  min-height: calc(100vh - 110%);
 }
-  

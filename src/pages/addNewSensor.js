@@ -4,6 +4,7 @@ import {CreatSensor} from '../servises/API';
 import './addNewSensorStyle.css';
 import { loginContext } from './layout';
 
+
 export function AddNewSensor() {
   const navigate = useNavigate();
   const [sensorName, setSensorName] = useState('');
@@ -11,6 +12,8 @@ export function AddNewSensor() {
   const[sensorType, setSensorType] = useState();
   const {isLogin,setIsLogin} = useContext(loginContext);
   const[message,setMessage] = useState();
+   
+  
 console.log(isLogin)
   const handleSubmit = async (e) => {
     if(!isLogin){
@@ -36,28 +39,25 @@ setMessage("Musisz być zalogowany by stworzyc sensor")
   };
 
   return(
-    <div>
+    <div className="container">
       <div>{message}</div>
       <div className="custom-header">Dodaj nowy czujnik</div>
       {/* <form onSubmit={handleSubmit} className="custom-form"> */}
-        <label>
-          <div className="nazwa">Nazwa czujnika</div>
-          <input type="text" value={sensorName} onChange={(e) => setSensorName(e.target.value)} />
-        </label>
-        <label>
-          <div className="Typ">Typ(umieść typy pomiędzy przecinkami)</div>
-          <input type="text" value={sensorType} onChange={(e) => setSensorType(e.target.value)} />
-        </label>
-        <label className="public-label ">
-          <span className="publiczny">Publiczny:</span>
-          <input style={{width:"40px",height:"40px"}} type="checkbox" checked={isPublic} onChange={() => setIsPublic(!isPublic)} />
-        </label>
-        <button onClick={handleSubmit} className="custom-button">
-          Dodaj czujnik
-        </button>
-      {/* </form> */}
+      <label>
+        <div className="nazwaprzycisku">Nazwa czujnika</div>
+        <input type="text" value={sensorName} onChange={(e) => setSensorName(e.target.value)} />
+      </label>
+      
+      <label>
+        <div className="Typ">Typ(umieść typy pomiędzy przecinkami)</div>
+        <input type="text" value={sensorType} onChange={(e) => setSensorType(e.target.value)} />
+      </label>
+      <label className="public-label ">
+        <span className="publiczny">Publiczny:</span>
+        <input style={{ width: "35px", height: "35px" }} type="checkbox" checked={isPublic} onChange={() => setIsPublic(!isPublic)} />
+      </label>
+      <button onClick={handleSubmit} className="custom-button">Dodaj czujnik</button>
     </div>
   );
 }
-
 export default AddNewSensor;

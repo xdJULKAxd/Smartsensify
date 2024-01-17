@@ -46,7 +46,6 @@ export function LoginPages() {
 
   return (
     <div>
-      <div className="logo">Smartsensify</div>
     <div className="container">
       <div >{message}</div>
       {loading && (<img src={Spiner} alt="Your SVG" />)}

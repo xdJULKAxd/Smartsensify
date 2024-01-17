@@ -1,7 +1,6 @@
-
 .typ,
 .public-info {
-  font-family:  Verdana, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
   color: #010000;
   text-align: left;
@@ -10,7 +9,7 @@
   
 }
 .sensor-name {
-  font-family:  Verdana, sans-serif;
+  font-family:  'Times New Roman', Times, serif;
   font-size: 24px;
   color:#010000;
   text-align: left;
@@ -18,10 +17,8 @@
   line-height: 1.5;
   
 }
-
-
 .name{
-   font-family:Verdana,sans-serif;
+   font-family:'Times New Roman', Times, serif;
   font-size: 28px;
   font-weight: bold;
   color: #010000;
@@ -70,3 +67,20 @@ border: none; /* Usuwa obramowanie przycisków */
   text-align: center;
   margin-bottom: 10px;
 }
+buttonnew-style {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #4caf50; /* Zielony */
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttonnew-style:hover {
+  background-color: #2e7d32; 
+  transform: scale(1.05); }
