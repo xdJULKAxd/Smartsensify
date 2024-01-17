@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import {CreatSensor} from '../servises/API';
 import './addNewSensorStyle.css';
 import { loginContext } from './layout';
+import { toastConstant } from '../Constants';
+import { toast } from "react-toastify";
 
 
 export function AddNewSensor() {
@@ -17,7 +19,7 @@ export function AddNewSensor() {
 console.log(isLogin)
   const handleSubmit = async (e) => {
     if(!isLogin){
-setMessage("Musisz być zalogowany by stworzyc sensor")
+      toast.error("Musisz być zalogowany by stworzyc sensor",toastConstant)
  return
     }
       
@@ -39,20 +41,19 @@ setMessage("Musisz być zalogowany by stworzyc sensor")
   };
 
   return(
-    <div className="container">
+    <div>
       <div>{message}</div>
       <div className="custom-header">Dodaj nowy czujnik</div>
       {/* <form onSubmit={handleSubmit} className="custom-form"> */}
-      <label>
-        <div className="nazwaprzycisku">Nazwa czujnika</div>
-        <input type="text" value={sensorName} onChange={(e) => setSensorName(e.target.value)} />
-      </label>
-      
-      <label>
-        <div className="Typ">Typ(umieść typy pomiędzy przecinkami)</div>
-        <input type="text" value={sensorType} onChange={(e) => setSensorType(e.target.value)} />
-      </label>
-      <label className="public-label ">
+        <label>
+          <div className="nazwap">Nazwa czujnika</div>
+          <input type="text" value={sensorName} onChange={(e) => setSensorName(e.target.value)} />
+        </label>
+        <label>
+          <div className="Typ">Typ(umieść typy pomiędzy przecinkami)</div>
+          <input type="text" value={sensorType} onChange={(e) => setSensorType(e.target.value)} />
+        </label>
+        <label className="public-label ">
         <span className="publiczny">Publiczny:</span>
         <input style={{ width: "35px", height: "35px" }} type="checkbox" checked={isPublic} onChange={() => setIsPublic(!isPublic)} />
       </label>
@@ -60,4 +61,5 @@ setMessage("Musisz być zalogowany by stworzyc sensor")
     </div>
   );
 }
+
 export default AddNewSensor;

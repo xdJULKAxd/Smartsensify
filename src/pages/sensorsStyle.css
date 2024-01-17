@@ -1,10 +1,13 @@
 
 .name1 {
- font-size:40px;
  font-family:'Times New Roman', Times, serif;
  display: flex;
  justify-content: center; 
  align-items: center; 
+ font-size:30px;
+ margin-top: 1%;
+ 
+ 
 
 }.sensorElement {
     border: 1px solid #ddd;
@@ -34,8 +37,11 @@
   top: 70%; /* Ustawienie w połowie wysokości ekranu */
   right: 20px;
   transform: translateY(-80%); /* Przesunięcie przycisku o połowę jego własnej wysokości w górę, aby być dokładnie na środku */
-  font-size: 15px;
+  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  }
+  .link-to-sensor{
+    font-size: 20px;
   }

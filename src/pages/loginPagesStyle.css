@@ -16,13 +16,12 @@ body {
   .form-group {
     margin-bottom: 24px;
     position: relative;
-
   }
-  .form-group1 {
-    margin-bottom: 24px;
-    position: relative;
-
+  .form-group input::placeholder {
+    font-size: 18px;
+    /* Dodatkowe style według potrzeb */
   }
+
   .form-group2 {
     margin-bottom: 24px;
     position: relative;
@@ -41,6 +40,7 @@ body {
   .register{
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 20px; 
 
   }
   .info{

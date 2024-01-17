@@ -32,11 +32,10 @@ else{ navigate("/login") }
   };
 
   return (
-    <div>
-      <div  onClick={toggleVisibility}className="sidebar-background"></div>
+    
     <div className={`sidebar ${isvisible ? "visible" : "hidden"}`}>
       <button onClick={toggleVisibility} className="arrow">
-        <i class="fa-solid fa-arrow-right"></i>
+        <i class="fa-solid fa-arrow-right "></i>
       </button>
       <div className="nav-links">
         <div className="icon">
@@ -46,7 +45,7 @@ else{ navigate("/login") }
         <button onClick={()=>Login()}>{isLogin? "Wyloguj się":"Zaloguj się" } </button>
         </div>
         <div>
-          <i className="fa-solid fa-map mr" > </i>
+          <i className="fa-solid fa-map mr"> </i>
           <Link to="/">Mapa</Link>
         </div>
         <div>
@@ -69,8 +68,8 @@ else{ navigate("/login") }
         </div>
       </div>
     </div>
-    </div>
-  );
+    
+  )
 }
 
 export default Sidebar;

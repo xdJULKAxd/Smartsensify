@@ -12,14 +12,13 @@ export function Toolbar({onMenuClick}) {
     <i className="fa-solid fa-bars"></i>
   </button>
       <div>
-     
-      <img src={logo} alt="Logo" height="60px" width="60px"/>
+      <img src={logo} alt="Logo" height="70px"/> 
       <div className="smart">SMARTSENSITY</div> 
           </div>
           <Link to="/newsensor">
           <button>
           <i className="fa-solid fa-magnifying-glass"></i>
-           </button>
+             </button>
              </Link>
     </div>
    

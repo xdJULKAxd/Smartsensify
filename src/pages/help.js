@@ -26,9 +26,9 @@ export function Help() {
                     Jeśli masz problemy z logowaniem, sprawdź czy:
                 </p>
                 <ul>
-                    <div>Sprawdziłeś poprawność loginu i hasła.</div>
-                    <div>Sprawdziłeś połączenie z internetem.</div>
-                    <div>W razie dalszych problemów skorzystaj z opcji "Przypomnij hasło".</div>
+                    <p>Sprawdziłeś poprawność loginu i hasła.</p>
+                    <p>Sprawdziłeś połączenie z internetem.</p>
+                    <p>W razie dalszych problemów skorzystaj z opcji "Przypomnij hasło".</p>
                 </ul>
             </section>
             <section>

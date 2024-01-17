@@ -1,12 +1,11 @@
 
-  .nazwaprzycisku {
-    font-family:'Times New Roman', Times, serif;
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #000000;
-   
-    
-  }
+.nazwap {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #000000;
+ 
+}
   input[type="text"] {
       width: 600px; /* Dostosuj szerokość według potrzeb */
       padding: 10px; /* Dostosuj padding według potrzeb */
@@ -76,7 +75,7 @@
   }
   body{
     
-    background-image: url('../images/2.jpg');  /* Ścieżka do Twojego obrazu */
+    background-image: url('../images/hanna.jpg');  /* Ścieżka do Twojego obrazu */
     background-size: cover;
     background-position: center;
     
@@ -89,13 +88,4 @@
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-  }
-  .container {
-    background-color: #ccc; /* Szary kolor tła kontenera */
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 900px;
-    max-height: 800px; 
-    margin-right: 500px;
-    margin-top: 110px;
   }

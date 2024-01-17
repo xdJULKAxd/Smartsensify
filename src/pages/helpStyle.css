@@ -1,43 +1,45 @@
+
 .help-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #f7f7f7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Times New Roman', serif; /* Ustawienie czcionki na Times New Roman */
+  border-radius: 10px;
 }
 
-h1, h2 {
-  color: #4caf50; /* Jasny zielony */
-  font-family: 'Times New Roman', serif; /* Ustawienie czcionki na Times New Roman */
+.help-header {
+  text-align: center;
+  color: #000;
 }
 
-section {
+.section-container {
   margin-bottom: 20px;
 }
 
+h2 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
 p {
-  color: #333; /* Czarny tekst */
-  font-size: 18px; /* Zwiększenie rozmiaru czcionki */
-  line-height: 1.6; /* Minimalny odstęp między wierszami */
+  color: #000;
+  line-height: 1.6;
 }
 
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
 }
 
 li {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
-/* Dodaj animację dla linków */
-a {
-  color: #4caf50; /* Jasny zielony */
-  transition: color 0.3s ease;
-  font-family: 'Times New Roman', serif; /* Ustawienie czcionki na Times New Roman */
+strong {
+  color: #000;
 }
 
-a:hover {
-  color: #2e7d32; /* Ciemniejszy odcień zielonego po najechaniu myszką */
+em {
+  color: #000;
 }

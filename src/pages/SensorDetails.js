@@ -26,7 +26,7 @@ function setDensity(step){
   const array = [] 
   console.log(readingsraw)
  const raw  = JSON.parse(localStorage.getItem("raw"))
-  for (let index = 0; index < raw.length; index+=(100/step) ) {
+  for (let index = 0; index < raw.length; index+=step) {
     const element = raw[index];
    array.push(element) 
   }
@@ -83,12 +83,9 @@ break
       }
       SensorData(id).then(data=>{ 
         console.log(data)
-        if(!data||data.error||data.length===0){
-          toast.warn("Brak odczytów",toastConstant)
-        }
-      else{localStorage.setItem("raw",JSON.stringify(data.map(ConvertToReading) )) 
-      setDensity(20)
-     }})
+      localStorage.setItem("raw",JSON.stringify(data.map(ConvertToReading) )) 
+      setDensity(50)
+      })
 setSensor(result.sensor)
 setMessage("")
      })
@@ -110,9 +107,11 @@ setMessage("")
       <p className="public-info">Publiczny: {sensor.isPublic ? 'Tak' : 'Nie'}</p>
       {/* {sensor.type} */}
       <p className="typ"> Typ :{ sensor.type ? sensor.type.map( oneType => <p>{oneType}</p>) : <></>} </p> 
-      <button className="buttonnew-style" onClick={()=>setDensity(50)}>Ustaw stopień gęsty</button>
-          <button className="buttonnew-style"onClick={()=>setDensity(20)}>Ustaw stopień średni</button>
-          <button className="buttonnew-style" onClick={()=>setDensity(2)}>Ustaw stopień rzadki</button>
+      <div className="buttonDensity">
+      <button onClick={()=>setDensity(20)}>Ustaw stopień gęsty</button>
+          <button onClick={()=>setDensity(70)}>Ustaw stopień średni</button>
+          <button onClick={()=>setDensity(120)}>Ustaw stopień rzadki</button>
+          </div>
       <LineChart ref={chart} data={readings} width={1200} height={600}margin={{ top: 5, right: 20, bottom: 5, left: 0 }} > 
       <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
@@ -128,7 +127,7 @@ setMessage("")
       <YAxis> </YAxis>
       <Line dataKey="temperatura" stroke='#000000'> </Line>
         </LineChart>
-        <button onClick={getChart}>pobierz wykres</button>
+        <button className="download" onClick={getChart}>Pobierz wykres</button>
       <div class="bottom-bar">
       {isLogin && (<button className="deleteSensor" onClick={Delete}> Usuń sensor</button>)}
       </div>

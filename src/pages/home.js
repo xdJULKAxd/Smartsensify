@@ -29,7 +29,7 @@ export function Home() {
           <i className="fa-solid fa-bars"></i> 
         </button>
         </Link>
-        <Link to="/">
+        <Link to="/help">
         <button className="location">
         <i className="fa-solid fa-location-dot"></i>
         </button>

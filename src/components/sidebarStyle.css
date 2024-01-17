@@ -25,11 +25,12 @@
   align-items: center;
   justify-content: center;
   display: flex;
-  margin-top: 110px;
+  margin-top: 80px;
+ left:10%;
   
 }
 .icon-user{
-  margin:10px auto;
+  margin:9px auto;
   margin-left:75px;
   display:block;
   font-size: 100px;
@@ -83,7 +84,7 @@ cursor: pointer;
   width: 180px;
   font-weight: bold;
   font-size: 24px; 
-  margin-right:20px;
+  margin-right:10px;
   background-color: #469536;
   color: #0b0707; /* Set the text color */
   border: none;
