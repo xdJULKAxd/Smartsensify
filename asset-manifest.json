@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/Smartsensify/static/css/main.97b7c85d.css",
-    "main.js": "/Smartsensify/static/js/main.d4bb80f8.js",
+    "main.css": "/Smartsensify/static/css/main.06207371.css",
+    "main.js": "/Smartsensify/static/js/main.d5f43cf3.js",
     "static/js/787.972fba8a.chunk.js": "/Smartsensify/static/js/787.972fba8a.chunk.js",
+    "static/media/hanna.jpg": "/Smartsensify/static/media/hanna.0a8992aedf591c615ec6.jpg",
     "service-worker.js": "/Smartsensify/service-worker.js",
     "static/media/logo.png": "/Smartsensify/static/media/logo.e5f2dc64097a1ccd73f0.png",
+    "static/media/12-dots-scale-rotate.svg?react": "/Smartsensify/static/media/12-dots-scale-rotate.1a843b2827bafce857517f39941c2a7a.svg",
     "index.html": "/Smartsensify/index.html",
-    "main.97b7c85d.css.map": "/Smartsensify/static/css/main.97b7c85d.css.map",
-    "main.d4bb80f8.js.map": "/Smartsensify/static/js/main.d4bb80f8.js.map",
+    "main.06207371.css.map": "/Smartsensify/static/css/main.06207371.css.map",
+    "main.d5f43cf3.js.map": "/Smartsensify/static/js/main.d5f43cf3.js.map",
     "787.972fba8a.chunk.js.map": "/Smartsensify/static/js/787.972fba8a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.97b7c85d.css",
-    "static/js/main.d4bb80f8.js"
+    "static/css/main.06207371.css",
+    "static/js/main.d5f43cf3.js"
   ]
 }
