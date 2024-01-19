@@ -8,19 +8,20 @@
   justify-content: space-between; /* Rozdziela przyciski na krańce kontenera */
   align-items: center;
   padding: 30px; /* Dodaje wewnętrzny odstęp, aby przyciski nie przykleiły się do krawędzi */
-  border-radius: 10%;
-  
+  border-radius: 8%;
+  margin-right: 8px;
 }
     
 
 
 .sonsor,
 .location {
+  
   background-color: #469536; /* Dostosuj kolor tła przycisków */
   border: none; /* Usuwa obramowanie przycisków */
   margin: 0; /* Usuwa marginesy przycisków */
   color: #040101; /* Kolor tekstu przycisków */
-  padding: 27px; /* Zwiększa rozmiar przycisków */
+  padding: 24px; /* Zwiększa rozmiar przycisków */
   border-radius: 25%; /* Dodaje zaokrąglenia do przycisków */
   font-weight: bold; /* Pogrubienie tekstu */
   font-size: 24px;
