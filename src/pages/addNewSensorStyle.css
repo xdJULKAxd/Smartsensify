@@ -7,11 +7,11 @@
  
 }
   input[type="text"] {
-      width: 600px; /* Dostosuj szerokość według potrzeb */
-      padding: 10px; /* Dostosuj padding według potrzeb */
+      width: 600px; 
+      padding: 10px; 
       margin-bottom: 15px;
       font-size: 24px;
-      border: none; /* Usuwa obramowanie przycisków */
+      border: none; 
       border-radius: 5px;
       box-sizing: border-box;
     }
@@ -75,7 +75,7 @@
   }
   body{
     
-    background-image: url('../images/hanna.jpg');  /* Ścieżka do Twojego obrazu */
+    background-image: url('../images/hanna.jpg');  
     background-size: cover;
     background-position: center;
     

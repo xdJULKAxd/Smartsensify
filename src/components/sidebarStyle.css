@@ -43,8 +43,7 @@
   align-items: center;
   justify-content: flex-end;
   height: 100px; 
-  font-weight: bold; /* Pogrubienie tekstu */
-  font-size: 28px;
+  font-weight: bold; 
   margin-top:auto;
 }
 
@@ -58,8 +57,8 @@ font-weight: bold;
 border: none;
 border-radius: 10px;
 position: fixed;
-top: 20px; /* Przesunięcie do góry */
-left: 40px; /* Przesunięcie w lewo */
+top: 20px; 
+left: 40px; 
 cursor: pointer;
 
 }
@@ -86,10 +85,10 @@ cursor: pointer;
   font-size: 24px; 
   margin-right:10px;
   background-color: #469536;
-  color: #0b0707; /* Set the text color */
+  color: #0b0707; 
   border: none;
   border-radius: 10px;
-  padding: 10px 20px; /* Adjust padding as needed */
+  padding: 10px 20px; 
   cursor: pointer;
  }
  .mr{

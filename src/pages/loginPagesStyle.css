@@ -19,7 +19,7 @@ body {
   }
   .form-group input::placeholder {
     font-size: 18px;
-    /* Dodatkowe style według potrzeb */
+    
   }
 
   .form-group2 {
@@ -47,26 +47,26 @@ body {
     font-size: 18px;
   }
   .form-group input[type="password"] {
-    width: 50%; /* Rozciągnij input na całą szerokość rodzica */
-    padding: 15px 20px; /* Dostosuj padding według potrzeb */
+    width: 50%; 
+    padding: 15px 20px; 
     border: 1px solid #ddd;
-    border-radius: 8px; /* Zaokrąglij rogi */
-    box-sizing: border-box; /* Uwzględnij padding i border w szerokości */
+    border-radius: 8px; 
+    box-sizing: border-box; 
     margin-bottom: 20px;
   }
   .login-button {
-    padding: 10px 20px; /* Dostosuj padding według potrzeb */
-    border-radius: 8px; /* Zaokrąglij rogi */
-    font-size: 20px; /* Dostosuj rozmiar czcionki według potrzeb */
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    font-size: 20px;
     cursor: pointer;
     background-color: #469536;
     color: #090909;
     border: none;
   }
   .brakkonta{
-    padding: 10px 20px; /* Dostosuj padding według potrzeb */
-    border-radius: 8px; /* Zaokrąglij rogi */
-    font-size: 20px; /* Dostosuj rozmiar czcionki według potrzeb */
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    font-size: 20px; 
     cursor: pointer;
     background-color: #469536;
     color: #090909;

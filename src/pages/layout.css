@@ -1,4 +1,4 @@
-/* .settings */
+
 .layout{
   min-height: 100vh;
 }
@@ -6,12 +6,12 @@ footer{top: 90%;
   position:static;
 
 }
-/* unvisited link */
+
 a:link {
     color: #000000;
   }
   
-  /* visited link */
+ 
   a:visited {
     color: #000000;}
   
@@ -20,7 +20,7 @@ a:link {
     color: #2a6c2a;
   }
   
-  /* selected link */
+  
   a:active {
     color: #5181c5;
   }

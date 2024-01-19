@@ -19,24 +19,24 @@
   }
   .bottom-plus{
     position: fixed;
-    bottom: 20px; /* Dystans od dołu strony */
-    right: 20px; /* Dystans od prawej strony */
-    font-size: 50px; /* Rozmiar ikony */
+    bottom: 20px; 
+    right: 20px; 
+    font-size: 50px; 
     
   }
   
   .information {  
   font-family: 'Times New Roman', Times, serif;
   border-radius: 8px;
-  text-align: center; /* Tekst na środku przycisku */
+  text-align: center;
   color: #000000;
   background-color: #0a5c0a;
   outline: none;
   height: 60px;
   width: 150px;
-  top: 70%; /* Ustawienie w połowie wysokości ekranu */
+  top: 70%; 
   right: 20px;
-  transform: translateY(-80%); /* Przesunięcie przycisku o połowę jego własnej wysokości w górę, aby być dokładnie na środku */
+  transform: translateY(-80%); 
   font-size: 24px;
   display: flex;
   align-items: center;
